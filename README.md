@@ -3,7 +3,7 @@
 ## 1. Title Page
 **Project Title**: Prescriptions Management System (Roshetta Pro)  
 **Author(s)**: Abdalla Hassanin  
-**Date**: [4/7/2024] 
+**Date**: 4/7/2024
 **Version**: 1.0  
 
 ## 2. Table of Contents
@@ -287,4 +287,4 @@ Diagrams illustrating data flow between components.
 ### Revision History
 | Version | Date       | Description                        | Author            |
 |---------|------------|------------------------------------|-------------------|
-| 1.0     | [4/7/2024] | Initial document creation          | Abdalla Hassanin  |
+| 1.0     | 4/7/2024   | Initial document creation          | Abdalla Hassanin  |

@@ -3,7 +3,7 @@
 ## 1. Title Page
 **Project Title**: Prescriptions Management System (Roshetta Pro)  
 **Author(s)**: Abdalla Hassanin  
-**Date**: [Today's Date]  
+**Date**: [4/7/2024] 
 **Version**: 1.0  
 
 ## 2. Table of Contents
@@ -278,7 +278,7 @@ Diagrams illustrating data flow between components.
 - [SQL Server Documentation](https://docs.microsoft.com/en-us/sql/sql-server/?view=sql-server-ver15)
 
 ### Additional Information
-- Project GitHub repository: [Link]
+- Project GitHub repository: [[Link](https://github.com/abdalla-hassanin/Prescriptions-Management-System-Roshetta-Pro)]
 
 ## 15. Approval and Revision History
 ### Approvals
@@ -287,4 +287,4 @@ Diagrams illustrating data flow between components.
 ### Revision History
 | Version | Date       | Description                        | Author            |
 |---------|------------|------------------------------------|-------------------|
-| 1.0     | [Date]     | Initial document creation          | Abdalla Hassanin  |
+| 1.0     | [4/7/2024] | Initial document creation          | Abdalla Hassanin  |

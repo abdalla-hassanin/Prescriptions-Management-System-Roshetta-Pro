@@ -1,0 +1,12 @@
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Data\bin\Debug\net8.0\RoshettaProAPI.Data.deps.json
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Data\bin\Debug\net8.0\RoshettaProAPI.Data.dll
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Data\bin\Debug\net8.0\RoshettaProAPI.Data.pdb
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Data\obj\Debug\net8.0\RoshettaProAPI.Data.csproj.AssemblyReference.cache
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Data\obj\Debug\net8.0\RoshettaProAPI.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Data\obj\Debug\net8.0\RoshettaProAPI.Data.AssemblyInfoInputs.cache
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Data\obj\Debug\net8.0\RoshettaProAPI.Data.AssemblyInfo.cs
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Data\obj\Debug\net8.0\RoshettaProAPI.Data.csproj.CoreCompileInputs.cache
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Data\obj\Debug\net8.0\RoshettaProAPI.Data.dll
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Data\obj\Debug\net8.0\refint\RoshettaProAPI.Data.dll
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Data\obj\Debug\net8.0\RoshettaProAPI.Data.pdb
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Data\obj\Debug\net8.0\ref\RoshettaProAPI.Data.dll

@@ -1,0 +1,17 @@
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Infrustructure\bin\Debug\net8.0\RoshettaProAPI.Infrustructure.deps.json
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Infrustructure\bin\Debug\net8.0\RoshettaProAPI.Infrustructure.runtimeconfig.json
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Infrustructure\bin\Debug\net8.0\RoshettaProAPI.Infrustructure.dll
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Infrustructure\bin\Debug\net8.0\RoshettaProAPI.Infrustructure.pdb
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Infrustructure\bin\Debug\net8.0\RoshettaProAPI.Data.dll
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Infrustructure\bin\Debug\net8.0\RoshettaProAPI.Data.pdb
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Infrustructure\obj\Debug\net8.0\RoshettaProAPI.Infrustructure.csproj.AssemblyReference.cache
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Infrustructure\obj\Debug\net8.0\RoshettaProAPI.Infrustructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Infrustructure\obj\Debug\net8.0\RoshettaProAPI.Infrustructure.AssemblyInfoInputs.cache
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Infrustructure\obj\Debug\net8.0\RoshettaProAPI.Infrustructure.AssemblyInfo.cs
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Infrustructure\obj\Debug\net8.0\RoshettaProAPI.Infrustructure.csproj.CoreCompileInputs.cache
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Infrustructure\obj\Debug\net8.0\Roshetta.BFB93509.Up2Date
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Infrustructure\obj\Debug\net8.0\RoshettaProAPI.Infrustructure.dll
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Infrustructure\obj\Debug\net8.0\refint\RoshettaProAPI.Infrustructure.dll
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Infrustructure\obj\Debug\net8.0\RoshettaProAPI.Infrustructure.pdb
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Infrustructure\obj\Debug\net8.0\RoshettaProAPI.Infrustructure.genruntimeconfig.cache
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Infrustructure\obj\Debug\net8.0\ref\RoshettaProAPI.Infrustructure.dll

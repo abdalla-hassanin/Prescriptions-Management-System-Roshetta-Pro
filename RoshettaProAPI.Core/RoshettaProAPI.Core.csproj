@@ -17,7 +17,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\RoshettaProAPI.Data\RoshettaProAPI.Data.csproj"/>
-        <ProjectReference Include="..\RoshettaProAPI.Infrustructure\RoshettaProAPI.Infrustructure.csproj"/>
+        <ProjectReference Include="..\RoshettaProAPI.Infrastructure\RoshettaProAPI.Infrastructure.csproj" />
         <ProjectReference Include="..\RoshettaProAPI.Service\RoshettaProAPI.Service.csproj"/>
     </ItemGroup>
 

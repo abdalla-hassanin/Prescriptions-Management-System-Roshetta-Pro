@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7FeynfeP3n1SqeLyRlwBb5kguZ7ZVfKPPyWubyiKsLvdn4EF0X8YWK4eTAPNqEEjF4WgioNtGGqDCtm5dkL14A==",
+  "dgSpecHash": "h4YIvBYvx87e9JHijVlEnkxOwMiiRCmyWcdH5WXjrkpdzS6CKyWGVRK6jcyHm6eYF+wCOT7kwAiOtFp1N5VwkA==",
   "success": true,
-  "projectFilePath": "D:\\Prescriptions-Management-System-Roshetta-Pro\\RoshettaProAPI\\RoshettaProAPI.Infrustructure\\RoshettaProAPI.Infrustructure.csproj",
+  "projectFilePath": "D:\\Prescriptions-Management-System-Roshetta-Pro\\RoshettaProAPI\\RoshettaProAPI.Infrastructure\\RoshettaProAPI.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\abdal\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\abdal\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

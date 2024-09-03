@@ -1663,7 +1663,7 @@
           "bin/placeholder/RoshettaProAPI.Data.dll": {}
         }
       },
-      "RoshettaProAPI.Infrustructure/1.0.0": {
+      "RoshettaProAPI.Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -1675,10 +1675,10 @@
           "Swashbuckle.AspNetCore.Annotations": "6.7.0"
         },
         "compile": {
-          "bin/placeholder/RoshettaProAPI.Infrustructure.dll": {}
+          "bin/placeholder/RoshettaProAPI.Infrastructure.dll": {}
         },
         "runtime": {
-          "bin/placeholder/RoshettaProAPI.Infrustructure.dll": {}
+          "bin/placeholder/RoshettaProAPI.Infrastructure.dll": {}
         }
       },
       "RoshettaProAPI.Service/1.0.0": {
@@ -5114,10 +5114,10 @@
       "path": "../RoshettaProAPI.Data/RoshettaProAPI.Data.csproj",
       "msbuildProject": "../RoshettaProAPI.Data/RoshettaProAPI.Data.csproj"
     },
-    "RoshettaProAPI.Infrustructure/1.0.0": {
+    "RoshettaProAPI.Infrastructure/1.0.0": {
       "type": "project",
-      "path": "../RoshettaProAPI.Infrustructure/RoshettaProAPI.Infrustructure.csproj",
-      "msbuildProject": "../RoshettaProAPI.Infrustructure/RoshettaProAPI.Infrustructure.csproj"
+      "path": "../RoshettaProAPI.Infrastructure/RoshettaProAPI.Infrastructure.csproj",
+      "msbuildProject": "../RoshettaProAPI.Infrastructure/RoshettaProAPI.Infrastructure.csproj"
     },
     "RoshettaProAPI.Service/1.0.0": {
       "type": "project",
@@ -5134,7 +5134,7 @@
       "Microsoft.AspNetCore.Http.Abstractions >= 2.2.0",
       "Microsoft.Extensions.Localization.Abstractions >= 8.0.7",
       "RoshettaProAPI.Data >= 1.0.0",
-      "RoshettaProAPI.Infrustructure >= 1.0.0",
+      "RoshettaProAPI.Infrastructure >= 1.0.0",
       "RoshettaProAPI.Service >= 1.0.0",
       "Serilog >= 4.0.1"
     ]
@@ -5170,8 +5170,8 @@
             "D:\\Prescriptions-Management-System-Roshetta-Pro\\RoshettaProAPI\\RoshettaProAPI.Data\\RoshettaProAPI.Data.csproj": {
               "projectPath": "D:\\Prescriptions-Management-System-Roshetta-Pro\\RoshettaProAPI\\RoshettaProAPI.Data\\RoshettaProAPI.Data.csproj"
             },
-            "D:\\Prescriptions-Management-System-Roshetta-Pro\\RoshettaProAPI\\RoshettaProAPI.Infrustructure\\RoshettaProAPI.Infrustructure.csproj": {
-              "projectPath": "D:\\Prescriptions-Management-System-Roshetta-Pro\\RoshettaProAPI\\RoshettaProAPI.Infrustructure\\RoshettaProAPI.Infrustructure.csproj"
+            "D:\\Prescriptions-Management-System-Roshetta-Pro\\RoshettaProAPI\\RoshettaProAPI.Infrastructure\\RoshettaProAPI.Infrastructure.csproj": {
+              "projectPath": "D:\\Prescriptions-Management-System-Roshetta-Pro\\RoshettaProAPI\\RoshettaProAPI.Infrastructure\\RoshettaProAPI.Infrastructure.csproj"
             },
             "D:\\Prescriptions-Management-System-Roshetta-Pro\\RoshettaProAPI\\RoshettaProAPI.Service\\RoshettaProAPI.Service.csproj": {
               "projectPath": "D:\\Prescriptions-Management-System-Roshetta-Pro\\RoshettaProAPI\\RoshettaProAPI.Service\\RoshettaProAPI.Service.csproj"

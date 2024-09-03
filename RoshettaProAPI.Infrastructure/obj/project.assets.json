@@ -5652,11 +5652,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Prescriptions-Management-System-Roshetta-Pro\\RoshettaProAPI\\RoshettaProAPI.Infrustructure\\RoshettaProAPI.Infrustructure.csproj",
-      "projectName": "RoshettaProAPI.Infrustructure",
-      "projectPath": "D:\\Prescriptions-Management-System-Roshetta-Pro\\RoshettaProAPI\\RoshettaProAPI.Infrustructure\\RoshettaProAPI.Infrustructure.csproj",
+      "projectUniqueName": "D:\\Prescriptions-Management-System-Roshetta-Pro\\RoshettaProAPI\\RoshettaProAPI.Infrastructure\\RoshettaProAPI.Infrastructure.csproj",
+      "projectName": "RoshettaProAPI.Infrastructure",
+      "projectPath": "D:\\Prescriptions-Management-System-Roshetta-Pro\\RoshettaProAPI\\RoshettaProAPI.Infrastructure\\RoshettaProAPI.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\abdal\\.nuget\\packages\\",
-      "outputPath": "D:\\Prescriptions-Management-System-Roshetta-Pro\\RoshettaProAPI\\RoshettaProAPI.Infrustructure\\obj\\",
+      "outputPath": "D:\\Prescriptions-Management-System-Roshetta-Pro\\RoshettaProAPI\\RoshettaProAPI.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\abdal\\AppData\\Roaming\\NuGet\\NuGet.Config",

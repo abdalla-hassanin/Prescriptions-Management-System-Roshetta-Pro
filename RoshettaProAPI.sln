@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoshettaProAPI.Core", "Rosh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoshettaProAPI.Service", "RoshettaProAPI.Service\RoshettaProAPI.Service.csproj", "{4FC5C126-7C9D-41C4-985D-5E704DBDC1E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoshettaProAPI.Infrustructure", "RoshettaProAPI.Infrustructure\RoshettaProAPI.Infrustructure.csproj", "{60193CFC-59F8-4155-9987-E18487256C52}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoshettaProAPI.Infrastructure", "RoshettaProAPI.Infrastructure\RoshettaProAPI.Infrastructure.csproj", "{60193CFC-59F8-4155-9987-E18487256C52}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoshettaProAPI.Api", "RoshettaProAPI.Api\RoshettaProAPI.Api.csproj", "{8DDADD3C-F1B2-4C32-84E9-50CA523F3A55}"
 EndProject

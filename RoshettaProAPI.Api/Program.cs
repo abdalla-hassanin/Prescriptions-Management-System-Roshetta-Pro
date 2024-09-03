@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using RoshettaProAPI.Core.Base.Middleware;
 using RoshettaProAPI.Infrustructure;
 using RoshettaProAPI.Infrustructure.Context;
 using RoshettaProAPI.Service;
@@ -49,6 +50,8 @@ void ConfigureMiddleware(WebApplication application)
         application.UseSwagger();
         application.UseSwaggerUI();
     }
+    application.UseMiddleware<ErrorHandlerMiddleware>();
+
 
     application.UseHttpsRedirection();
     application.UseRouting();

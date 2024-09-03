@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1pkOUGK3oYPcsFLQZHzsDKPpngnfYh6M9s1FxCedInSd3O/PxRtO7tsTMkKWeIXfC/g40goOQIcu5lhkDwfp+A==",
+  "dgSpecHash": "Iyl9qt/d5twy7VIelS24W+UpbyG08p3GTvnn6szBgjBedj0riZaX9RXoS92HGuaE6KEVU2SbUIX488Uh3h0NnQ==",
   "success": true,
   "projectFilePath": "D:\\Prescriptions-Management-System-Roshetta-Pro\\RoshettaProAPI\\RoshettaProAPI.Core\\RoshettaProAPI.Core.csproj",
   "expectedPackageFiles": [
@@ -25,9 +25,9 @@
     "C:\\Users\\abdal\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\abdal\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.5\\microsoft.data.sqlclient.5.1.5.nupkg.sha512",
     "C:\\Users\\abdal\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.1.1\\microsoft.data.sqlclient.sni.runtime.5.1.1.nupkg.sha512",
-    "C:\\Users\\abdal\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.7\\microsoft.entityframeworkcore.8.0.7.nupkg.sha512",
-    "C:\\Users\\abdal\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.7\\microsoft.entityframeworkcore.abstractions.8.0.7.nupkg.sha512",
-    "C:\\Users\\abdal\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.7\\microsoft.entityframeworkcore.analyzers.8.0.7.nupkg.sha512",
+    "C:\\Users\\abdal\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.8\\microsoft.entityframeworkcore.8.0.8.nupkg.sha512",
+    "C:\\Users\\abdal\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.8\\microsoft.entityframeworkcore.abstractions.8.0.8.nupkg.sha512",
+    "C:\\Users\\abdal\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.8\\microsoft.entityframeworkcore.analyzers.8.0.8.nupkg.sha512",
     "C:\\Users\\abdal\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\8.0.7\\microsoft.entityframeworkcore.relational.8.0.7.nupkg.sha512",
     "C:\\Users\\abdal\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\8.0.7\\microsoft.entityframeworkcore.sqlserver.8.0.7.nupkg.sha512",
     "C:\\Users\\abdal\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

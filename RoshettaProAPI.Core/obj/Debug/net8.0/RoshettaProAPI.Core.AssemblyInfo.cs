@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RoshettaProAPI.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e247acc146ed841710428f63495d16b6182625a5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+08866e71a9c13593ae0fe215f679e627b8d37875")]
 [assembly: System.Reflection.AssemblyProductAttribute("RoshettaProAPI.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RoshettaProAPI.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

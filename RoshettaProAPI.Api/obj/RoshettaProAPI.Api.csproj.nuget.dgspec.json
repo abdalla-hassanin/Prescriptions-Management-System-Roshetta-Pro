@@ -367,7 +367,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Prescriptions-Management-System-Roshetta-Pro\\RoshettaProAPI\\RoshettaProAPI.Infrastructure\\RoshettaProAPI.Infrastructure.csproj": {
+                "projectPath": "D:\\Prescriptions-Management-System-Roshetta-Pro\\RoshettaProAPI\\RoshettaProAPI.Infrastructure\\RoshettaProAPI.Infrastructure.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -391,6 +395,10 @@
             "MailKit": {
               "target": "Package",
               "version": "[4.7.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
             },
             "MimeKit": {
               "target": "Package",

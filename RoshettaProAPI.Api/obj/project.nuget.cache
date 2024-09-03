@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "0+C/ekoE1Fpf1Lad3XN6XZVLk6mbU3SaLkVfySRWVEG0yqITUiv0wdrSidF8o8WYlY7d0WRDKqAHe3g1dqqX5g==",
+  "dgSpecHash": "TPk24WHQD+m3oshJ4hHXJfe55xlO/rqbgXoKuchRrgKGy7ep9CyoD9u8tfRSxxLaz3IdHbgbrqmV/oc4iJ0jLg==",
   "success": true,
   "projectFilePath": "D:\\Prescriptions-Management-System-Roshetta-Pro\\RoshettaProAPI\\RoshettaProAPI.Api\\RoshettaProAPI.Api.csproj",
   "expectedPackageFiles": [
@@ -31,9 +31,9 @@
     "C:\\Users\\abdal\\.nuget\\packages\\microsoft.codeanalysis.workspaces.common\\4.5.0\\microsoft.codeanalysis.workspaces.common.4.5.0.nupkg.sha512",
     "C:\\Users\\abdal\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.5\\microsoft.data.sqlclient.5.1.5.nupkg.sha512",
     "C:\\Users\\abdal\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.1.1\\microsoft.data.sqlclient.sni.runtime.5.1.1.nupkg.sha512",
-    "C:\\Users\\abdal\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.7\\microsoft.entityframeworkcore.8.0.7.nupkg.sha512",
-    "C:\\Users\\abdal\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.7\\microsoft.entityframeworkcore.abstractions.8.0.7.nupkg.sha512",
-    "C:\\Users\\abdal\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.7\\microsoft.entityframeworkcore.analyzers.8.0.7.nupkg.sha512",
+    "C:\\Users\\abdal\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.8\\microsoft.entityframeworkcore.8.0.8.nupkg.sha512",
+    "C:\\Users\\abdal\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.8\\microsoft.entityframeworkcore.abstractions.8.0.8.nupkg.sha512",
+    "C:\\Users\\abdal\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.8\\microsoft.entityframeworkcore.analyzers.8.0.8.nupkg.sha512",
     "C:\\Users\\abdal\\.nuget\\packages\\microsoft.entityframeworkcore.design\\8.0.7\\microsoft.entityframeworkcore.design.8.0.7.nupkg.sha512",
     "C:\\Users\\abdal\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\8.0.7\\microsoft.entityframeworkcore.relational.8.0.7.nupkg.sha512",
     "C:\\Users\\abdal\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\8.0.7\\microsoft.entityframeworkcore.sqlserver.8.0.7.nupkg.sha512",

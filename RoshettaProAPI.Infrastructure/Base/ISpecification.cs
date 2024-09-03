@@ -8,7 +8,7 @@ public interface ISpecification<T>
     Expression<Func<T, bool>> Criteria { get; }
 
     // Include related entities
-    Func<IQueryable<T>, IQueryable<T>> Include { get; }
+    List<Func<IQueryable<T>, IQueryable<T>>> Includes { get; }
 
     // Sorting
     Func<IQueryable<T>, IOrderedQueryable<T>> OrderBy { get; }

@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using RoshettaProAPI.Infrustructure;
 using RoshettaProAPI.Infrustructure.Context;
+using RoshettaProAPI.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +24,7 @@ void ConfigureServices(IServiceCollection services, IConfiguration configuration
     services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
     ConfigureDatabase(services, configuration);
+    RegisterApplicationServices(services);
 }
 
 void ConfigureDatabase(IServiceCollection services, IConfiguration configuration)
@@ -30,6 +33,14 @@ void ConfigureDatabase(IServiceCollection services, IConfiguration configuration
         options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"),
             b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
 }
+
+void RegisterApplicationServices(IServiceCollection services)
+{
+    services
+        .AddServiceDependencies()
+        .AddInfrastructureDependencies();
+}
+
 
 void ConfigureMiddleware(WebApplication application)
 {

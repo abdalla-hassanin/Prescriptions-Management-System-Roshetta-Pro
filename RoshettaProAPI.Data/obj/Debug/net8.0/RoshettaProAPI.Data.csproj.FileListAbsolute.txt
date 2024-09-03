@@ -10,3 +10,4 @@ D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Da
 D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Data\obj\Debug\net8.0\refint\RoshettaProAPI.Data.dll
 D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Data\obj\Debug\net8.0\RoshettaProAPI.Data.pdb
 D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Data\obj\Debug\net8.0\ref\RoshettaProAPI.Data.dll
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Data\obj\Debug\net8.0\RoshettaProAPI.Data.sourcelink.json

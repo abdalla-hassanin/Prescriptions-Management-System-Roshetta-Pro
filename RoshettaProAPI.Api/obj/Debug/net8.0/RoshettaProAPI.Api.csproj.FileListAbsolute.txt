@@ -144,11 +144,9 @@ D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Ap
 D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Api\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Api\bin\Debug\net8.0\RoshettaProAPI.Core.dll
 D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Api\bin\Debug\net8.0\RoshettaProAPI.Data.dll
-D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Api\bin\Debug\net8.0\RoshettaProAPI.Infrustructure.dll
 D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Api\bin\Debug\net8.0\RoshettaProAPI.Service.dll
 D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Api\bin\Debug\net8.0\RoshettaProAPI.Core.pdb
 D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Api\bin\Debug\net8.0\RoshettaProAPI.Data.pdb
-D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Api\bin\Debug\net8.0\RoshettaProAPI.Infrustructure.pdb
 D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Api\bin\Debug\net8.0\RoshettaProAPI.Service.pdb
 D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Api\obj\Debug\net8.0\RoshettaProAPI.Api.csproj.AssemblyReference.cache
 D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Api\obj\Debug\net8.0\RoshettaProAPI.Api.GeneratedMSBuildEditorConfig.editorconfig
@@ -171,3 +169,6 @@ D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Ap
 D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Api\obj\Debug\net8.0\RoshettaProAPI.Api.pdb
 D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Api\obj\Debug\net8.0\RoshettaProAPI.Api.genruntimeconfig.cache
 D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Api\obj\Debug\net8.0\ref\RoshettaProAPI.Api.dll
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Api\bin\Debug\net8.0\RoshettaProAPI.Infrastructure.dll
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Api\bin\Debug\net8.0\RoshettaProAPI.Infrastructure.pdb
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Api\obj\Debug\net8.0\RoshettaProAPI.Api.sourcelink.json

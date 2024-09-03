@@ -10,3 +10,9 @@ D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Se
 D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Service\obj\Debug\net8.0\refint\RoshettaProAPI.Service.dll
 D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Service\obj\Debug\net8.0\RoshettaProAPI.Service.pdb
 D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Service\obj\Debug\net8.0\ref\RoshettaProAPI.Service.dll
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Service\bin\Debug\net8.0\RoshettaProAPI.Data.dll
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Service\bin\Debug\net8.0\RoshettaProAPI.Infrastructure.dll
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Service\bin\Debug\net8.0\RoshettaProAPI.Infrastructure.pdb
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Service\bin\Debug\net8.0\RoshettaProAPI.Data.pdb
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Service\obj\Debug\net8.0\RoshettaProAPI.Service.sourcelink.json
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Service\obj\Debug\net8.0\Roshetta.56994725.Up2Date

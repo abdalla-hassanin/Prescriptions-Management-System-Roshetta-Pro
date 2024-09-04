@@ -10,8 +10,6 @@ public class MedicalHistory
     public string Notes { get; set; }
     public DateTime CreatedTime { get; set; }
     public DateTime UpdatedTime { get; set; }
-    public int? CreatedBy { get; set; }
-    public int? UpdatedBy { get; set; }
 
     public Patient Patient { get; set; }
     public Doctor Doctor { get; set; }

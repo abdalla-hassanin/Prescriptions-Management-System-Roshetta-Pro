@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TPk24WHQD+m3oshJ4hHXJfe55xlO/rqbgXoKuchRrgKGy7ep9CyoD9u8tfRSxxLaz3IdHbgbrqmV/oc4iJ0jLg==",
+  "dgSpecHash": "tFYWcoMt1xi5AHnLn4Dvs0iomjupwKxlPCAN42CBR22SJLgP+qi/TMxPU4ywvLGZoDsnnyrGu/vsNmP58NR7Mg==",
   "success": true,
   "projectFilePath": "D:\\Prescriptions-Management-System-Roshetta-Pro\\RoshettaProAPI\\RoshettaProAPI.Api\\RoshettaProAPI.Api.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\abdal\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\abdal\\.nuget\\packages\\bouncycastle.cryptography\\2.4.0\\bouncycastle.cryptography.2.4.0.nupkg.sha512",
     "C:\\Users\\abdal\\.nuget\\packages\\fluentvalidation\\11.9.2\\fluentvalidation.11.9.2.nupkg.sha512",
+    "C:\\Users\\abdal\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
     "C:\\Users\\abdal\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.9.2\\fluentvalidation.dependencyinjectionextensions.11.9.2.nupkg.sha512",
     "C:\\Users\\abdal\\.nuget\\packages\\google.apis\\1.68.0\\google.apis.1.68.0.nupkg.sha512",
     "C:\\Users\\abdal\\.nuget\\packages\\google.apis.auth\\1.68.0\\google.apis.auth.1.68.0.nupkg.sha512",

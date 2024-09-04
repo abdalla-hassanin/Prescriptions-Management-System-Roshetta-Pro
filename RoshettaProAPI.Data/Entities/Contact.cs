@@ -9,8 +9,6 @@ public class Contact
     public string Relationship { get; set; }
     public DateTime CreatedTime { get; set; }
     public DateTime UpdatedTime { get; set; }
-    public int? CreatedBy { get; set; }
-    public int? UpdatedBy { get; set; }
 
     public ICollection<Patient> EmergencyPatients { get; set; }
 }

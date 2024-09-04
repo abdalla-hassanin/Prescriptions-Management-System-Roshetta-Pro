@@ -8,6 +8,7 @@
     <ItemGroup>
         <PackageReference Include="AutoMapper" Version="13.0.1"/>
         <PackageReference Include="FluentValidation" Version="11.9.2"/>
+        <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
         <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.2"/>
         <PackageReference Include="MediatR" Version="12.3.0"/>
         <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0"/>
@@ -19,6 +20,57 @@
         <ProjectReference Include="..\RoshettaProAPI.Data\RoshettaProAPI.Data.csproj"/>
         <ProjectReference Include="..\RoshettaProAPI.Infrastructure\RoshettaProAPI.Infrastructure.csproj" />
         <ProjectReference Include="..\RoshettaProAPI.Service\RoshettaProAPI.Service.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="MediatrHandlers\Contact\Commands\Handler\" />
+      <Folder Include="MediatrHandlers\Contact\Commands\RequestModels\" />
+      <Folder Include="MediatrHandlers\Contact\Commands\Validator\" />
+      <Folder Include="MediatrHandlers\Contact\Queries\Handler\" />
+      <Folder Include="MediatrHandlers\Contact\Queries\RequestModels\" />
+      <Folder Include="MediatrHandlers\Contact\Queries\Response\" />
+      <Folder Include="MediatrHandlers\Doctor\Commands\Handler\" />
+      <Folder Include="MediatrHandlers\Doctor\Commands\RequestModels\" />
+      <Folder Include="MediatrHandlers\Doctor\Commands\Validator\" />
+      <Folder Include="MediatrHandlers\Doctor\Queries\Handler\" />
+      <Folder Include="MediatrHandlers\Doctor\Queries\RequestModels\" />
+      <Folder Include="MediatrHandlers\Doctor\Queries\Response\" />
+      <Folder Include="MediatrHandlers\MedicalHistory\Commands\Handler\" />
+      <Folder Include="MediatrHandlers\MedicalHistory\Commands\RequestModels\" />
+      <Folder Include="MediatrHandlers\MedicalHistory\Commands\Validator\" />
+      <Folder Include="MediatrHandlers\MedicalHistory\Queries\Handler\" />
+      <Folder Include="MediatrHandlers\MedicalHistory\Queries\RequestModels\" />
+      <Folder Include="MediatrHandlers\MedicalHistory\Queries\Response\" />
+      <Folder Include="MediatrHandlers\Medication\Commands\Handler\" />
+      <Folder Include="MediatrHandlers\Medication\Commands\RequestModels\" />
+      <Folder Include="MediatrHandlers\Medication\Commands\Validator\" />
+      <Folder Include="MediatrHandlers\Medication\Queries\Handler\" />
+      <Folder Include="MediatrHandlers\Medication\Queries\RequestModels\" />
+      <Folder Include="MediatrHandlers\Medication\Queries\Response\" />
+      <Folder Include="MediatrHandlers\PatientXray\Commands\Handler\" />
+      <Folder Include="MediatrHandlers\PatientXray\Commands\RequestModels\" />
+      <Folder Include="MediatrHandlers\PatientXray\Commands\Validator\" />
+      <Folder Include="MediatrHandlers\PatientXray\Queries\Handler\" />
+      <Folder Include="MediatrHandlers\PatientXray\Queries\RequestModels\" />
+      <Folder Include="MediatrHandlers\PatientXray\Queries\Response\" />
+      <Folder Include="MediatrHandlers\Patient\Commands\Handler\" />
+      <Folder Include="MediatrHandlers\Patient\Commands\RequestModels\" />
+      <Folder Include="MediatrHandlers\Patient\Commands\Validator\" />
+      <Folder Include="MediatrHandlers\Patient\Queries\Handler\" />
+      <Folder Include="MediatrHandlers\Patient\Queries\RequestModels\" />
+      <Folder Include="MediatrHandlers\Patient\Queries\Response\" />
+      <Folder Include="MediatrHandlers\PrescriptionMedication\Commands\Handler\" />
+      <Folder Include="MediatrHandlers\PrescriptionMedication\Commands\RequestModels\" />
+      <Folder Include="MediatrHandlers\PrescriptionMedication\Commands\Validator\" />
+      <Folder Include="MediatrHandlers\PrescriptionMedication\Queries\Handler\" />
+      <Folder Include="MediatrHandlers\PrescriptionMedication\Queries\RequestModels\" />
+      <Folder Include="MediatrHandlers\PrescriptionMedication\Queries\Response\" />
+      <Folder Include="MediatrHandlers\Prescription\Commands\Handler\" />
+      <Folder Include="MediatrHandlers\Prescription\Commands\RequestModels\" />
+      <Folder Include="MediatrHandlers\Prescription\Commands\Validator\" />
+      <Folder Include="MediatrHandlers\Prescription\Queries\Handler\" />
+      <Folder Include="MediatrHandlers\Prescription\Queries\RequestModels\" />
+      <Folder Include="MediatrHandlers\Prescription\Queries\Response\" />
     </ItemGroup>
 
 </Project>

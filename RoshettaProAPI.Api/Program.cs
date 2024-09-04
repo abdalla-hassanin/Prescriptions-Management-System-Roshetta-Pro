@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using RoshettaProAPI.Core;
 using RoshettaProAPI.Core.Base.Middleware;
 using RoshettaProAPI.Infrustructure;
 using RoshettaProAPI.Infrustructure.Context;
@@ -39,6 +40,7 @@ void RegisterApplicationServices(IServiceCollection services)
 {
     services
         .AddServiceDependencies()
+        .AddCoreDependencies()
         .AddInfrastructureDependencies();
 }
 

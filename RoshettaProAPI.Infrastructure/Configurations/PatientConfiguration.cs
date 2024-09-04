@@ -30,11 +30,13 @@ public class PatientConfiguration : IEntityTypeConfiguration<Patient>
         builder.Property(p => p.Address).IsRequired().HasMaxLength(255);
 
         
-        builder.HasOne(p => p.EmergencyContact)
-            .WithMany(c => c.EmergencyPatients)
-            .HasForeignKey(p => p.EmergencyContactID)
-            .OnDelete(DeleteBehavior.Cascade); // Cascade delete EmergencyContact
-        
+        // Configure Emergency Contact fields
+        builder.Property(p => p.EmergencyContactName)
+            .HasMaxLength(100);
+
+        builder.Property(p => p.EmergencyContactPhone)
+            .HasMaxLength(20);
+
         
         // Configuring relationships that need cascading deletes
         builder.HasMany(p => p.MedicalHistories)
@@ -53,158 +55,167 @@ public class PatientConfiguration : IEntityTypeConfiguration<Patient>
             .OnDelete(DeleteBehavior.Cascade); // Cascade delete PatientXrays
 
         
-            // Seed data
-            builder.HasData(
-                new Patient
-                {
-                    PatientID = 1,
-                    FirstName = "Youssef",
-                    LastName = "Ahmed",
-                    DateOfBirth = new DateTime(1985, 5, 15),
-                    Gender = Gender.Male,
-                    Address = "123 Cairo Street, Cairo",
-                    PhoneNumber = "+201300000001",
-                    Email = "youssef.ahmed@example.com",
-                    BloodType = BloodType.APositive,
-                    EmergencyContactID = 1,
-                    CreatedTime = DateTime.Now,
-                    UpdatedTime = DateTime.Now
-                },
-                new Patient
-                {
-                    PatientID = 2,
-                    FirstName = "Amina",
-                    LastName = "Fathy",
-                    DateOfBirth = new DateTime(1990, 3, 22),
-                    Gender = Gender.Female,
-                    Address = "456 Giza Road, Giza",
-                    PhoneNumber = "+201300000002",
-                    Email = "amina.fathy@example.com",
-                    BloodType = BloodType.ANegative,
-                    EmergencyContactID = 2,
-                    CreatedTime = DateTime.Now,
-                    UpdatedTime = DateTime.Now
-                },
-                new Patient
-                {
-                    PatientID = 3,
-                    FirstName = "Omar",
-                    LastName = "Nabil",
-                    DateOfBirth = new DateTime(1988, 8, 30),
-                    Gender = Gender.Male,
-                    Address = "789 Alexandria Avenue, Alexandria",
-                    PhoneNumber = "+201300000003",
-                    Email = "omar.nabil@example.com",
-                    BloodType = BloodType.BPositive,
-                    EmergencyContactID = 3,
-                    CreatedTime = DateTime.Now,
-                    UpdatedTime = DateTime.Now
-                },
-                new Patient
-                {
-                    PatientID = 4,
-                    FirstName = "Hassan",
-                    LastName = "Mahmoud",
-                    DateOfBirth = new DateTime(1985, 7, 12),
-                    Gender = Gender.Male,
-                    Address = "101 Mansoura Lane, Mansoura",
-                    PhoneNumber = "+201300000004",
-                    Email = "hassan.mahmoud@example.com",
-                    BloodType = BloodType.BNegative,
-                    EmergencyContactID = 4,
-                    CreatedTime = DateTime.Now,
-                    UpdatedTime = DateTime.Now
-                },
-                new Patient
-                {
-                    PatientID = 5,
-                    FirstName = "Layla",
-                    LastName = "Omar",
-                    DateOfBirth = new DateTime(1992, 1, 25),
-                    Gender = Gender.Female,
-                    Address = "202 Asyut Street, Asyut",
-                    PhoneNumber = "+201300000005",
-                    Email = "layla.omar@example.com",
-                    BloodType = BloodType.ABPositive,
-                    EmergencyContactID = 5,
-                    CreatedTime = DateTime.Now,
-                    UpdatedTime = DateTime.Now
-                },
-                new Patient
-                {
-                    PatientID = 6,
-                    FirstName = "Ahmed",
-                    LastName = "Maher",
-                    DateOfBirth = new DateTime(1995, 9, 10),
-                    Gender = Gender.Male,
-                    Address = "303 Suez Road, Suez",
-                    PhoneNumber = "+201300000006",
-                    Email = "ahmed.maher@example.com",
-                    BloodType = BloodType.ABNegative,
-                    EmergencyContactID = 6,
-                    CreatedTime = DateTime.Now,
-                    UpdatedTime = DateTime.Now
-                },
-                new Patient
-                {
-                    PatientID = 7,
-                    FirstName = "Nada",
-                    LastName = "Ali",
-                    DateOfBirth = new DateTime(1987, 4, 14),
-                    Gender = Gender.Female,
-                    Address = "404 Fayoum Street, Fayoum",
-                    PhoneNumber = "+201300000007",
-                    Email = "nada.ali@example.com",
-                    BloodType = BloodType.OPositive,
-                    EmergencyContactID = 7,
-                    CreatedTime = DateTime.Now,
-                    UpdatedTime = DateTime.Now
-                },
-                new Patient
-                {
-                    PatientID = 8,
-                    FirstName = "Mona",
-                    LastName = "Yasser",
-                    DateOfBirth = new DateTime(1989, 2, 5),
-                    Gender = Gender.Female,
-                    Address = "505 Luxor Avenue, Luxor",
-                    PhoneNumber = "+201300000008",
-                    Email = "mona.yasser@example.com",
-                    BloodType = BloodType.ONegative,
-                    EmergencyContactID = 8,
-                    CreatedTime = DateTime.Now,
-                    UpdatedTime = DateTime.Now
-                },
-                new Patient
-                {
-                    PatientID = 9,
-                    FirstName = "Hany",
-                    LastName = "Ibrahim",
-                    DateOfBirth = new DateTime(1983, 11, 20),
-                    Gender = Gender.Male,
-                    Address = "606 Aswan Road, Aswan",
-                    PhoneNumber = "+201300000009",
-                    Email = "hany.ibrahim@example.com",
-                    BloodType = BloodType.APositive,
-                    EmergencyContactID = 9,
-                    CreatedTime = DateTime.Now,
-                    UpdatedTime = DateTime.Now
-                },
-                new Patient
-                {
-                    PatientID = 10,
-                    FirstName = "Dina",
-                    LastName = "Hassan",
-                    DateOfBirth = new DateTime(1991, 6, 17),
-                    Gender = Gender.Female,
-                    Address = "707 Hurghada Street, Hurghada",
-                    PhoneNumber = "+201300000010",
-                    Email = "dina.hassan@example.com",
-                    BloodType = BloodType.ABPositive,
-                    EmergencyContactID = 10,
-                    CreatedTime = DateTime.Now,
-                    UpdatedTime = DateTime.Now
-                }
-            );
-    }
+  // Seed data
+        builder.HasData(
+            new Patient
+            {
+                PatientID = 1,
+                FirstName = "Youssef",
+                LastName = "Ahmed",
+                DateOfBirth = new DateTime(1985, 5, 15),
+                Gender = Gender.Male,
+                Address = "123 Cairo Street, Cairo",
+                PhoneNumber = "+201300000001",
+                Email = "youssef.ahmed@example.com",
+                BloodType = BloodType.APositive,
+                EmergencyContactName = "Ali Ahmed",
+                EmergencyContactPhone = "+201300000011",
+                CreatedTime = DateTime.Now,
+                UpdatedTime = DateTime.Now
+            },
+            new Patient
+            {
+                PatientID = 2,
+                FirstName = "Amina",
+                LastName = "Fathy",
+                DateOfBirth = new DateTime(1990, 3, 22),
+                Gender = Gender.Female,
+                Address = "456 Giza Road, Giza",
+                PhoneNumber = "+201300000002",
+                Email = "amina.fathy@example.com",
+                BloodType = BloodType.ANegative,
+                EmergencyContactName = "Sara Fathy",
+                EmergencyContactPhone = "+201300000012",
+                CreatedTime = DateTime.Now,
+                UpdatedTime = DateTime.Now
+            },
+            new Patient
+            {
+                PatientID = 3,
+                FirstName = "Omar",
+                LastName = "Nabil",
+                DateOfBirth = new DateTime(1988, 8, 30),
+                Gender = Gender.Male,
+                Address = "789 Alexandria Avenue, Alexandria",
+                PhoneNumber = "+201300000003",
+                Email = "omar.nabil@example.com",
+                BloodType = BloodType.BPositive,
+                EmergencyContactName = "Nabil Omar",
+                EmergencyContactPhone = "+201300000013",
+                CreatedTime = DateTime.Now,
+                UpdatedTime = DateTime.Now
+            },
+            new Patient
+            {
+                PatientID = 4,
+                FirstName = "Hassan",
+                LastName = "Mahmoud",
+                DateOfBirth = new DateTime(1985, 7, 12),
+                Gender = Gender.Male,
+                Address = "101 Mansoura Lane, Mansoura",
+                PhoneNumber = "+201300000004",
+                Email = "hassan.mahmoud@example.com",
+                BloodType = BloodType.BNegative,
+                EmergencyContactName = "Mahmoud Hassan",
+                EmergencyContactPhone = "+201300000014",
+                CreatedTime = DateTime.Now,
+                UpdatedTime = DateTime.Now
+            },
+            new Patient
+            {
+                PatientID = 5,
+                FirstName = "Layla",
+                LastName = "Omar",
+                DateOfBirth = new DateTime(1992, 1, 25),
+                Gender = Gender.Female,
+                Address = "202 Asyut Street, Asyut",
+                PhoneNumber = "+201300000005",
+                Email = "layla.omar@example.com",
+                BloodType = BloodType.ABPositive,
+                EmergencyContactName = "Omar Layla",
+                EmergencyContactPhone = "+201300000015",
+                CreatedTime = DateTime.Now,
+                UpdatedTime = DateTime.Now
+            },
+            new Patient
+            {
+                PatientID = 6,
+                FirstName = "Ahmed",
+                LastName = "Maher",
+                DateOfBirth = new DateTime(1995, 9, 10),
+                Gender = Gender.Male,
+                Address = "303 Suez Road, Suez",
+                PhoneNumber = "+201300000006",
+                Email = "ahmed.maher@example.com",
+                BloodType = BloodType.ABNegative,
+                EmergencyContactName = "Maher Ahmed",
+                EmergencyContactPhone = "+201300000016",
+                CreatedTime = DateTime.Now,
+                UpdatedTime = DateTime.Now
+            },
+            new Patient
+            {
+                PatientID = 7,
+                FirstName = "Nada",
+                LastName = "Ali",
+                DateOfBirth = new DateTime(1987, 4, 14),
+                Gender = Gender.Female,
+                Address = "404 Fayoum Street, Fayoum",
+                PhoneNumber = "+201300000007",
+                Email = "nada.ali@example.com",
+                BloodType = BloodType.OPositive,
+                EmergencyContactName = "Ali Nada",
+                EmergencyContactPhone = "+201300000017",
+                CreatedTime = DateTime.Now,
+                UpdatedTime = DateTime.Now
+            },
+            new Patient
+            {
+                PatientID = 8,
+                FirstName = "Mona",
+                LastName = "Yasser",
+                DateOfBirth = new DateTime(1989, 2, 5),
+                Gender = Gender.Female,
+                Address = "505 Luxor Avenue, Luxor",
+                PhoneNumber = "+201300000008",
+                Email = "mona.yasser@example.com",
+                BloodType = BloodType.ONegative,
+                EmergencyContactName = "Yasser Mona",
+                EmergencyContactPhone = "+201300000018",
+                CreatedTime = DateTime.Now,
+                UpdatedTime = DateTime.Now
+            },
+            new Patient
+            {
+                PatientID = 9,
+                FirstName = "Hany",
+                LastName = "Ibrahim",
+                DateOfBirth = new DateTime(1983, 11, 20),
+                Gender = Gender.Male,
+                Address = "606 Aswan Road, Aswan",
+                PhoneNumber = "+201300000009",
+                Email = "hany.ibrahim@example.com",
+                BloodType = BloodType.APositive,
+                EmergencyContactName = "Ibrahim Hany",
+                EmergencyContactPhone = "+201300000019",
+                CreatedTime = DateTime.Now,
+                UpdatedTime = DateTime.Now
+            },
+            new Patient
+            {
+                PatientID = 10,
+                FirstName = "Dina",
+                LastName = "Hassan",
+                DateOfBirth = new DateTime(1991, 6, 17),
+                Gender = Gender.Female,
+                Address = "707 Hurghada Street, Hurghada",
+                PhoneNumber = "+201300000010",
+                Email = "dina.hassan@example.com",
+                BloodType = BloodType.ABPositive,
+                EmergencyContactName = "Hassan Dina",
+                EmergencyContactPhone = "+201300000020",
+                CreatedTime = DateTime.Now,
+                UpdatedTime = DateTime.Now
+            }
+        );    }
 }

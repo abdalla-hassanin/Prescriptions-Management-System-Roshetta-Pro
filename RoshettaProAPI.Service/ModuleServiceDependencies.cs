@@ -13,8 +13,6 @@ public static class ModuleServiceDependencies
         services.AddScoped(typeof(IGenericService<>), typeof(GenericService<>));
 
         // Register Entity Services
-        services.AddScoped<IClinicService, ClinicService>();
-        services.AddScoped<IContactService, ContactService>();
         services.AddScoped<IDoctorService, DoctorService>();
         services.AddScoped<IMedicalHistoryService, MedicalHistoryService>();
         services.AddScoped<IMedicationService, MedicationService>();

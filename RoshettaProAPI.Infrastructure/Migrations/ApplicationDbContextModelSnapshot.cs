@@ -22,308 +22,6 @@ namespace RoshettaProAPI.Infrustructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("RoshettaProAPI.Data.Entities.Clinic", b =>
-                {
-                    b.Property<int>("ClinicID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ClinicID"));
-
-                    b.Property<string>("Address")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<int?>("CreatedBy")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreatedTime")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
-
-                    b.Property<int?>("UpdatedBy")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("UpdatedTime")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()");
-
-                    b.HasKey("ClinicID");
-
-                    b.ToTable("Clinics");
-
-                    b.HasData(
-                        new
-                        {
-                            ClinicID = 1,
-                            Address = "123 Cairo St, Cairo, Egypt",
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(7317),
-                            Email = "cairo.medical@example.com",
-                            Name = "Cairo Medical Center",
-                            PhoneNumber = "+2021234567",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(7349)
-                        },
-                        new
-                        {
-                            ClinicID = 2,
-                            Address = "456 Giza Rd, Giza, Egypt",
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(7359),
-                            Email = "giza.health@example.com",
-                            Name = "Giza Health Clinic",
-                            PhoneNumber = "+2027654321",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(7363)
-                        },
-                        new
-                        {
-                            ClinicID = 3,
-                            Address = "789 Alexandria Ave, Alexandria, Egypt",
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(7370),
-                            Email = "alex.family@example.com",
-                            Name = "Alexandria Family Clinic",
-                            PhoneNumber = "+2034567890",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(7374)
-                        },
-                        new
-                        {
-                            ClinicID = 4,
-                            Address = "101 Mansoura Blvd, Mansoura, Egypt",
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(7380),
-                            Email = "mansoura.general@example.com",
-                            Name = "Mansoura General Hospital",
-                            PhoneNumber = "+2051234567",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(7384)
-                        },
-                        new
-                        {
-                            ClinicID = 5,
-                            Address = "202 Asyut Rd, Asyut, Egypt",
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(7390),
-                            Email = "asyut.specialist@example.com",
-                            Name = "Asyut Specialist Clinic",
-                            PhoneNumber = "+2081234567",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(7394)
-                        },
-                        new
-                        {
-                            ClinicID = 6,
-                            Address = "303 Suez St, Suez, Egypt",
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(7400),
-                            Email = "suez.healthcare@example.com",
-                            Name = "Suez Healthcare",
-                            PhoneNumber = "+2067654321",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(7404)
-                        },
-                        new
-                        {
-                            ClinicID = 7,
-                            Address = "404 Fayoum Rd, Fayoum, Egypt",
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(7410),
-                            Email = "fayoum.health@example.com",
-                            Name = "Fayoum Health Center",
-                            PhoneNumber = "+2076543210",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(7414)
-                        },
-                        new
-                        {
-                            ClinicID = 8,
-                            Address = "505 Luxor St, Luxor, Egypt",
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(7420),
-                            Email = "luxor.medical@example.com",
-                            Name = "Luxor Medical Clinic",
-                            PhoneNumber = "+2091234567",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(7424)
-                        },
-                        new
-                        {
-                            ClinicID = 9,
-                            Address = "606 Aswan Ave, Aswan, Egypt",
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(7430),
-                            Email = "aswan.care@example.com",
-                            Name = "Aswan Care Clinic",
-                            PhoneNumber = "+2097654321",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(7434)
-                        },
-                        new
-                        {
-                            ClinicID = 10,
-                            Address = "707 Hurghada Blvd, Hurghada, Egypt",
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(7440),
-                            Email = "hurghada.wellness@example.com",
-                            Name = "Hurghada Wellness Center",
-                            PhoneNumber = "+2098765432",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(7444)
-                        });
-                });
-
-            modelBuilder.Entity("RoshettaProAPI.Data.Entities.Contact", b =>
-                {
-                    b.Property<int>("ContactID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ContactID"));
-
-                    b.Property<int?>("CreatedBy")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreatedTime")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
-
-                    b.Property<string>("Relationship")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<int?>("UpdatedBy")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("UpdatedTime")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()");
-
-                    b.HasKey("ContactID");
-
-                    b.ToTable("Contacts");
-
-                    b.HasData(
-                        new
-                        {
-                            ContactID = 1,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(2616),
-                            Email = "ahmed.ali@example.com",
-                            Name = "Ahmed Ali",
-                            PhoneNumber = "+201000000001",
-                            Relationship = "Brother",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(2656)
-                        },
-                        new
-                        {
-                            ContactID = 2,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(2665),
-                            Email = "sara.ahmed@example.com",
-                            Name = "Sara Ahmed",
-                            PhoneNumber = "+201000000002",
-                            Relationship = "Sister",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(2669)
-                        },
-                        new
-                        {
-                            ContactID = 3,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(2676),
-                            Email = "hassan.youssef@example.com",
-                            Name = "Hassan Youssef",
-                            PhoneNumber = "+201000000003",
-                            Relationship = "Father",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(2680)
-                        },
-                        new
-                        {
-                            ContactID = 4,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(2686),
-                            Email = "mona.khaled@example.com",
-                            Name = "Mona Khaled",
-                            PhoneNumber = "+201000000004",
-                            Relationship = "Mother",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(2690)
-                        },
-                        new
-                        {
-                            ContactID = 5,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(2696),
-                            Email = "omar.ibrahim@example.com",
-                            Name = "Omar Ibrahim",
-                            PhoneNumber = "+201000000005",
-                            Relationship = "Friend",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(2700)
-                        },
-                        new
-                        {
-                            ContactID = 6,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(2706),
-                            Email = "layla.nabil@example.com",
-                            Name = "Layla Nabil",
-                            PhoneNumber = "+201000000006",
-                            Relationship = "Cousin",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(2710)
-                        },
-                        new
-                        {
-                            ContactID = 7,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(2716),
-                            Email = "ali.maher@example.com",
-                            Name = "Ali Maher",
-                            PhoneNumber = "+201000000007",
-                            Relationship = "Uncle",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(2720)
-                        },
-                        new
-                        {
-                            ContactID = 8,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(2726),
-                            Email = "noha.saad@example.com",
-                            Name = "Noha Saad",
-                            PhoneNumber = "+201000000008",
-                            Relationship = "Aunt",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(2730)
-                        },
-                        new
-                        {
-                            ContactID = 9,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(2735),
-                            Email = "youssef.omar@example.com",
-                            Name = "Youssef Omar",
-                            PhoneNumber = "+201000000009",
-                            Relationship = "Nephew",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(2740)
-                        },
-                        new
-                        {
-                            ContactID = 10,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(2745),
-                            Email = "dina.yasser@example.com",
-                            Name = "Dina Yasser",
-                            PhoneNumber = "+201000000010",
-                            Relationship = "Niece",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 565, DateTimeKind.Local).AddTicks(2749)
-                        });
-                });
-
             modelBuilder.Entity("RoshettaProAPI.Data.Entities.Doctor", b =>
                 {
                     b.Property<int>("DoctorID")
@@ -331,9 +29,6 @@ namespace RoshettaProAPI.Infrustructure.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DoctorID"));
-
-                    b.Property<int>("ClinicID")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedTime")
                         .ValueGeneratedOnAdd()
@@ -374,130 +69,118 @@ namespace RoshettaProAPI.Infrustructure.Migrations
 
                     b.HasKey("DoctorID");
 
-                    b.HasIndex("ClinicID");
-
                     b.ToTable("Doctors");
 
                     b.HasData(
                         new
                         {
                             DoctorID = 1,
-                            ClinicID = 1,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 566, DateTimeKind.Local).AddTicks(6575),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(8941),
                             Email = "mohamed.hassan@example.com",
                             FirstName = "Mohamed",
                             LastName = "Hassan",
                             PhoneNumber = "+201200000001",
                             Specialization = 1,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 566, DateTimeKind.Local).AddTicks(6612)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(8967)
                         },
                         new
                         {
                             DoctorID = 2,
-                            ClinicID = 2,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 566, DateTimeKind.Local).AddTicks(6623),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(8974),
                             Email = "alaa.salem@example.com",
                             FirstName = "Alaa",
                             LastName = "Salem",
                             PhoneNumber = "+201200000002",
                             Specialization = 2,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 566, DateTimeKind.Local).AddTicks(6627)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(8977)
                         },
                         new
                         {
                             DoctorID = 3,
-                            ClinicID = 3,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 566, DateTimeKind.Local).AddTicks(6634),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(8982),
                             Email = "samir.youssef@example.com",
                             FirstName = "Samir",
                             LastName = "Youssef",
                             PhoneNumber = "+201200000003",
                             Specialization = 3,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 566, DateTimeKind.Local).AddTicks(6638)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(8985)
                         },
                         new
                         {
                             DoctorID = 4,
-                            ClinicID = 4,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 566, DateTimeKind.Local).AddTicks(6644),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(8990),
                             Email = "hassan.ibrahim@example.com",
                             FirstName = "Hassan",
                             LastName = "Ibrahim",
                             PhoneNumber = "+201200000004",
                             Specialization = 4,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 566, DateTimeKind.Local).AddTicks(6648)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(8993)
                         },
                         new
                         {
                             DoctorID = 5,
-                            ClinicID = 5,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 566, DateTimeKind.Local).AddTicks(6655),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(8997),
                             Email = "mona.nabil@example.com",
                             FirstName = "Mona",
                             LastName = "Nabil",
                             PhoneNumber = "+201200000005",
                             Specialization = 5,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 566, DateTimeKind.Local).AddTicks(6659)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(9001)
                         },
                         new
                         {
                             DoctorID = 6,
-                            ClinicID = 6,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 566, DateTimeKind.Local).AddTicks(6665),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(9005),
                             Email = "ahmed.mahmoud@example.com",
                             FirstName = "Ahmed",
                             LastName = "Mahmoud",
                             PhoneNumber = "+201200000006",
                             Specialization = 6,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 566, DateTimeKind.Local).AddTicks(6669)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(9008)
                         },
                         new
                         {
                             DoctorID = 7,
-                            ClinicID = 7,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 566, DateTimeKind.Local).AddTicks(6676),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(9013),
                             Email = "layla.omar@example.com",
                             FirstName = "Layla",
                             LastName = "Omar",
                             PhoneNumber = "+201200000007",
                             Specialization = 7,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 566, DateTimeKind.Local).AddTicks(6680)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(9016)
                         },
                         new
                         {
                             DoctorID = 8,
-                            ClinicID = 8,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 566, DateTimeKind.Local).AddTicks(6686),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(9021),
                             Email = "youssef.hassan@example.com",
                             FirstName = "Youssef",
                             LastName = "Hassan",
                             PhoneNumber = "+201200000008",
                             Specialization = 8,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 566, DateTimeKind.Local).AddTicks(6690)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(9024)
                         },
                         new
                         {
                             DoctorID = 9,
-                            ClinicID = 9,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 566, DateTimeKind.Local).AddTicks(6697),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(9028),
                             Email = "nada.ali@example.com",
                             FirstName = "Nada",
                             LastName = "Ali",
                             PhoneNumber = "+201200000009",
                             Specialization = 9,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 566, DateTimeKind.Local).AddTicks(6701)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(9031)
                         },
                         new
                         {
                             DoctorID = 10,
-                            ClinicID = 10,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 566, DateTimeKind.Local).AddTicks(6708),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(9036),
                             Email = "hany.maged@example.com",
                             FirstName = "Hany",
                             LastName = "Maged",
                             PhoneNumber = "+201200000010",
                             Specialization = 10,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 566, DateTimeKind.Local).AddTicks(6711)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(9039)
                         });
                 });
 
@@ -508,9 +191,6 @@ namespace RoshettaProAPI.Infrustructure.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MedicalHistoryID"));
-
-                    b.Property<int?>("CreatedBy")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedTime")
                         .ValueGeneratedOnAdd()
@@ -533,9 +213,6 @@ namespace RoshettaProAPI.Infrustructure.Migrations
                     b.Property<int>("PatientID")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UpdatedBy")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("UpdatedTime")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
@@ -556,111 +233,111 @@ namespace RoshettaProAPI.Infrustructure.Migrations
                         new
                         {
                             MedicalHistoryID = 1,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 570, DateTimeKind.Local).AddTicks(9815),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 201, DateTimeKind.Local).AddTicks(838),
                             Diagnosis = "Hypertension",
                             DoctorID = 1,
                             Notes = "Regular check-up",
                             PatientID = 1,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 570, DateTimeKind.Local).AddTicks(9854),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 201, DateTimeKind.Local).AddTicks(868),
                             VisitDate = new DateTime(2023, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MedicalHistoryID = 2,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 570, DateTimeKind.Local).AddTicks(9864),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 201, DateTimeKind.Local).AddTicks(875),
                             Diagnosis = "Diabetes",
                             DoctorID = 2,
                             Notes = "Diet recommended",
                             PatientID = 2,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 570, DateTimeKind.Local).AddTicks(9869),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 201, DateTimeKind.Local).AddTicks(879),
                             VisitDate = new DateTime(2023, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MedicalHistoryID = 3,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 570, DateTimeKind.Local).AddTicks(9876),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 201, DateTimeKind.Local).AddTicks(884),
                             Diagnosis = "Asthma",
                             DoctorID = 3,
                             Notes = "Inhaler prescribed",
                             PatientID = 3,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 570, DateTimeKind.Local).AddTicks(9880),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 201, DateTimeKind.Local).AddTicks(887),
                             VisitDate = new DateTime(2023, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MedicalHistoryID = 4,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 570, DateTimeKind.Local).AddTicks(9887),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 201, DateTimeKind.Local).AddTicks(892),
                             Diagnosis = "Migraine",
                             DoctorID = 4,
                             Notes = "Painkillers prescribed",
                             PatientID = 4,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 570, DateTimeKind.Local).AddTicks(9891),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 201, DateTimeKind.Local).AddTicks(895),
                             VisitDate = new DateTime(2023, 4, 4, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MedicalHistoryID = 5,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 570, DateTimeKind.Local).AddTicks(9897),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 201, DateTimeKind.Local).AddTicks(900),
                             Diagnosis = "Back Pain",
                             DoctorID = 5,
                             Notes = "Physiotherapy advised",
                             PatientID = 5,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 570, DateTimeKind.Local).AddTicks(9901),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 201, DateTimeKind.Local).AddTicks(903),
                             VisitDate = new DateTime(2023, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MedicalHistoryID = 6,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 570, DateTimeKind.Local).AddTicks(9908),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 201, DateTimeKind.Local).AddTicks(908),
                             Diagnosis = "Allergy",
                             DoctorID = 6,
                             Notes = "Antihistamines prescribed",
                             PatientID = 6,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 570, DateTimeKind.Local).AddTicks(9912),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 201, DateTimeKind.Local).AddTicks(911),
                             VisitDate = new DateTime(2023, 6, 6, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MedicalHistoryID = 7,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 570, DateTimeKind.Local).AddTicks(9919),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 201, DateTimeKind.Local).AddTicks(916),
                             Diagnosis = "High Cholesterol",
                             DoctorID = 7,
                             Notes = "Diet change advised",
                             PatientID = 7,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 570, DateTimeKind.Local).AddTicks(9922),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 201, DateTimeKind.Local).AddTicks(919),
                             VisitDate = new DateTime(2023, 7, 7, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MedicalHistoryID = 8,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 570, DateTimeKind.Local).AddTicks(9930),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 201, DateTimeKind.Local).AddTicks(923),
                             Diagnosis = "Anemia",
                             DoctorID = 8,
                             Notes = "Iron supplements prescribed",
                             PatientID = 8,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 570, DateTimeKind.Local).AddTicks(9934),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 201, DateTimeKind.Local).AddTicks(926),
                             VisitDate = new DateTime(2023, 8, 8, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MedicalHistoryID = 9,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 570, DateTimeKind.Local).AddTicks(9941),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 201, DateTimeKind.Local).AddTicks(931),
                             Diagnosis = "Flu",
                             DoctorID = 9,
                             Notes = "Rest and fluids advised",
                             PatientID = 9,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 570, DateTimeKind.Local).AddTicks(9945),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 201, DateTimeKind.Local).AddTicks(934),
                             VisitDate = new DateTime(2023, 9, 9, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             MedicalHistoryID = 10,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 570, DateTimeKind.Local).AddTicks(9951),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 201, DateTimeKind.Local).AddTicks(939),
                             Diagnosis = "Arthritis",
                             DoctorID = 10,
                             Notes = "Pain management plan created",
                             PatientID = 10,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 570, DateTimeKind.Local).AddTicks(9955),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 201, DateTimeKind.Local).AddTicks(942),
                             VisitDate = new DateTime(2023, 10, 10, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
@@ -709,502 +386,502 @@ namespace RoshettaProAPI.Infrustructure.Migrations
                         new
                         {
                             MedicationID = 1,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(6823),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4161),
                             Description = "Used for pain relief and fever reduction",
                             MedicationForm = 1,
                             Name = "Panadol",
                             SideEffects = "Nausea, Allergic reactions",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(6860)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4187)
                         },
                         new
                         {
                             MedicationID = 2,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(6870),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4194),
                             Description = "Anti-inflammatory and blood thinner",
                             MedicationForm = 1,
                             Name = "Aspirin",
                             SideEffects = "Gastrointestinal discomfort, Bleeding",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(6874)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4197)
                         },
                         new
                         {
                             MedicationID = 3,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(6880),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4202),
                             Description = "Antibiotic for bacterial infections",
                             MedicationForm = 2,
                             Name = "Amoxicillin",
                             SideEffects = "Diarrhea, Allergic reactions",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(6884)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4205)
                         },
                         new
                         {
                             MedicationID = 4,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(6890),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4209),
                             Description = "Pain relief and fever reduction for children",
                             MedicationForm = 3,
                             Name = "Paracetamol Syrup",
                             SideEffects = "Liver damage in high doses",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(6894)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4212)
                         },
                         new
                         {
                             MedicationID = 5,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7093),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4217),
                             Description = "Topical treatment for skin inflammation",
                             MedicationForm = 4,
                             Name = "Hydrocortisone Cream",
                             SideEffects = "Skin thinning, Allergic reactions",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7098)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4220)
                         },
                         new
                         {
                             MedicationID = 6,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7106),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4224),
                             Description = "Used for blood sugar control in diabetes",
                             MedicationForm = 5,
                             Name = "Insulin Injection",
                             SideEffects = "Hypoglycemia, Allergic reactions",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7110)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4227)
                         },
                         new
                         {
                             MedicationID = 7,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7116),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4232),
                             Description = "Prevents nausea and vomiting",
                             MedicationForm = 6,
                             Name = "Ondansetron Suppository",
                             SideEffects = "Headache, Fatigue",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7120)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4235)
                         },
                         new
                         {
                             MedicationID = 8,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7125),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4239),
                             Description = "Opioid pain medication for severe pain",
                             MedicationForm = 7,
                             Name = "Fentanyl Patch",
                             SideEffects = "Drowsiness, Addiction",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7129)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4242)
                         },
                         new
                         {
                             MedicationID = 9,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7135),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4246),
                             Description = "Nonsteroidal anti-inflammatory drug (NSAID)",
                             MedicationForm = 8,
                             Name = "Ibuprofen Liquid",
                             SideEffects = "Gastrointestinal discomfort, Kidney damage",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7139)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4249)
                         },
                         new
                         {
                             MedicationID = 10,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7145),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4254),
                             Description = "Fiber supplement for digestive health",
                             MedicationForm = 9,
                             Name = "Metamucil Powder",
                             SideEffects = "Bloating, Gas",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7149)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4257)
                         },
                         new
                         {
                             MedicationID = 11,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7155),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4261),
                             Description = "Topical NSAID for pain and inflammation",
                             MedicationForm = 10,
                             Name = "Diclofenac Gel",
                             SideEffects = "Skin irritation, Allergic reactions",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7159)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4264)
                         },
                         new
                         {
                             MedicationID = 12,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7165),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4268),
                             Description = "Sore throat relief",
                             MedicationForm = 2,
                             Name = "Throat Lozenges",
                             SideEffects = "Mouth irritation, Allergic reactions",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7169)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4271)
                         },
                         new
                         {
                             MedicationID = 13,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7174),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4276),
                             Description = "Bronchodilator for asthma",
                             MedicationForm = 1,
                             Name = "Albuterol Inhaler",
                             SideEffects = "Tremors, Increased heart rate",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7178)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4279)
                         },
                         new
                         {
                             MedicationID = 14,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7184),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4283),
                             Description = "Opioid pain relief for severe pain",
                             MedicationForm = 5,
                             Name = "Morphine Injection",
                             SideEffects = "Drowsiness, Addiction",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7188)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4286)
                         },
                         new
                         {
                             MedicationID = 15,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7197),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4291),
                             Description = "Pain relief and fever reducer",
                             MedicationForm = 1,
                             Name = "Tylenol Tablet",
                             SideEffects = "Liver damage in high doses",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7201)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4295)
                         },
                         new
                         {
                             MedicationID = 16,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7206),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4299),
                             Description = "Antifungal for skin infections",
                             MedicationForm = 4,
                             Name = "Miconazole Cream",
                             SideEffects = "Skin irritation, Allergic reactions",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7210)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4302)
                         },
                         new
                         {
                             MedicationID = 17,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7216),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4307),
                             Description = "Antibiotic for bacterial infections",
                             MedicationForm = 1,
                             Name = "Penicillin Tablet",
                             SideEffects = "Diarrhea, Allergic reactions",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7220)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4310)
                         },
                         new
                         {
                             MedicationID = 18,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7226),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4314),
                             Description = "Cough suppressant",
                             MedicationForm = 3,
                             Name = "Dextromethorphan Syrup",
                             SideEffects = "Drowsiness, Dizziness",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7230)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4317)
                         },
                         new
                         {
                             MedicationID = 19,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7236),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4322),
                             Description = "Corticosteroid for inflammation",
                             MedicationForm = 8,
                             Name = "Prednisolone Oral Liquid",
                             SideEffects = "Increased appetite, Mood changes",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7240)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4325)
                         },
                         new
                         {
                             MedicationID = 20,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7245),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4329),
                             Description = "Blood thinner to prevent clots",
                             MedicationForm = 1,
                             Name = "Warfarin Tablet",
                             SideEffects = "Bleeding, Bruising",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7249)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4332)
                         },
                         new
                         {
                             MedicationID = 21,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7255),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4336),
                             Description = "Relieves heartburn and indigestion",
                             MedicationForm = 8,
                             Name = "Gaviscon Liquid",
                             SideEffects = "Nausea, Constipation",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7259)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4339)
                         },
                         new
                         {
                             MedicationID = 22,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7265),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4344),
                             Description = "Antibiotic for serious bacterial infections",
                             MedicationForm = 2,
                             Name = "Clindamycin Capsule",
                             SideEffects = "Diarrhea, Allergic reactions",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7269)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4346)
                         },
                         new
                         {
                             MedicationID = 23,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7274),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4351),
                             Description = "NSAID for pain and inflammation",
                             MedicationForm = 1,
                             Name = "Naproxen Tablet",
                             SideEffects = "Gastrointestinal discomfort, Dizziness",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7278)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4354)
                         },
                         new
                         {
                             MedicationID = 24,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7284),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4530),
                             Description = "Antihistamine for allergy relief",
                             MedicationForm = 1,
                             Name = "Loratadine Tablet",
                             SideEffects = "Dry mouth, Drowsiness",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7288)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4534)
                         },
                         new
                         {
                             MedicationID = 25,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7294),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4538),
                             Description = "Topical antibiotic for skin infections",
                             MedicationForm = 4,
                             Name = "Mupirocin Ointment",
                             SideEffects = "Skin irritation, Burning",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7298)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4541)
                         },
                         new
                         {
                             MedicationID = 26,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7304),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4545),
                             Description = "Antihistamine for allergy relief",
                             MedicationForm = 3,
                             Name = "Cetirizine Syrup",
                             SideEffects = "Drowsiness, Dry mouth",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7308)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4548)
                         },
                         new
                         {
                             MedicationID = 27,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7314),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4553),
                             Description = "Beta-blocker for blood pressure and anxiety",
                             MedicationForm = 1,
                             Name = "Propranolol Tablet",
                             SideEffects = "Dizziness, Fatigue",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7318)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4556)
                         },
                         new
                         {
                             MedicationID = 28,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7324),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4560),
                             Description = "Proton pump inhibitor for acid reflux",
                             MedicationForm = 2,
                             Name = "Omeprazole Capsule",
                             SideEffects = "Headache, Diarrhea",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7328)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4563)
                         },
                         new
                         {
                             MedicationID = 29,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7333),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4568),
                             Description = "Antibiotic for bacterial infections",
                             MedicationForm = 1,
                             Name = "Doxycycline Tablet",
                             SideEffects = "Photosensitivity, Nausea",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7337)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4571)
                         },
                         new
                         {
                             MedicationID = 30,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7343),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4575),
                             Description = "H2 blocker for acid reflux",
                             MedicationForm = 1,
                             Name = "Ranitidine Tablet",
                             SideEffects = "Headache, Constipation",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7348)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4578)
                         },
                         new
                         {
                             MedicationID = 31,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7354),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4584),
                             Description = "Antibiotic for urinary tract infections",
                             MedicationForm = 1,
                             Name = "Trimethoprim Tablet",
                             SideEffects = "Nausea, Rash",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7358)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4587)
                         },
                         new
                         {
                             MedicationID = 32,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7364),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4591),
                             Description = "Antibiotic for anaerobic infections",
                             MedicationForm = 1,
                             Name = "Metronidazole Tablet",
                             SideEffects = "Nausea, Metallic taste",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7368)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4594)
                         },
                         new
                         {
                             MedicationID = 33,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7373),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4598),
                             Description = "Topical retinoid for acne",
                             MedicationForm = 1,
                             Name = "Tretinoin Cream",
                             SideEffects = "Skin irritation, Redness",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7377)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4601)
                         },
                         new
                         {
                             MedicationID = 34,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7383),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4606),
                             Description = "Antifungal shampoo for dandruff",
                             MedicationForm = 11,
                             Name = "Ketoconazole Shampoo",
                             SideEffects = "Skin irritation, Dryness",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7387)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4609)
                         },
                         new
                         {
                             MedicationID = 35,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7393),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4613),
                             Description = "Antifungal for serious infections",
                             MedicationForm = 5,
                             Name = "Amphotericin B Injection",
                             SideEffects = "Fever, Chills",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7397)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4616)
                         },
                         new
                         {
                             MedicationID = 36,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7402),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4621),
                             Description = "Hormone replacement for hypothyroidism",
                             MedicationForm = 1,
                             Name = "Levothyroxine Tablet",
                             SideEffects = "Palpitations, Weight loss",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7406)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4624)
                         },
                         new
                         {
                             MedicationID = 37,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7412),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4628),
                             Description = "Antiviral for cold sores",
                             MedicationForm = 5,
                             Name = "Acyclovir Cream",
                             SideEffects = "Skin irritation, Dryness",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7416)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4631)
                         },
                         new
                         {
                             MedicationID = 38,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7423),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4635),
                             Description = "Diuretic for fluid retention",
                             MedicationForm = 1,
                             Name = "Furosemide Tablet",
                             SideEffects = "Dehydration, Electrolyte imbalance",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7426)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4638)
                         },
                         new
                         {
                             MedicationID = 39,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7432),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4643),
                             Description = "Antibiotic for bacterial infections",
                             MedicationForm = 1,
                             Name = "Azithromycin Tablet",
                             SideEffects = "Nausea, Diarrhea",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7436)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4645)
                         },
                         new
                         {
                             MedicationID = 40,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7442),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4650),
                             Description = "Antibiotic for bacterial infections",
                             MedicationForm = 1,
                             Name = "Ciprofloxacin Tablet",
                             SideEffects = "Nausea, Dizziness",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7446)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4653)
                         },
                         new
                         {
                             MedicationID = 41,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7451),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4657),
                             Description = "Antifungal for yeast infections",
                             MedicationForm = 2,
                             Name = "Fluconazole Capsule",
                             SideEffects = "Nausea, Headache",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7455)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4660)
                         },
                         new
                         {
                             MedicationID = 42,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7462),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4664),
                             Description = "SNRI for depression and anxiety",
                             MedicationForm = 2,
                             Name = "Duloxetine Capsule",
                             SideEffects = "Nausea, Dry mouth",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7465)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4667)
                         },
                         new
                         {
                             MedicationID = 43,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7474),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4672),
                             Description = "Proton pump inhibitor for acid reflux",
                             MedicationForm = 2,
                             Name = "Lansoprazole Capsule",
                             SideEffects = "Headache, Diarrhea",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7477)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4675)
                         },
                         new
                         {
                             MedicationID = 44,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7483),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4679),
                             Description = "SSRI for depression and anxiety",
                             MedicationForm = 1,
                             Name = "Paroxetine Tablet",
                             SideEffects = "Nausea, Drowsiness",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7487)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4682)
                         },
                         new
                         {
                             MedicationID = 45,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7495),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4687),
                             Description = "Used for nerve pain and seizures",
                             MedicationForm = 2,
                             Name = "Gabapentin Capsule",
                             SideEffects = "Dizziness, Fatigue",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7499)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4690)
                         },
                         new
                         {
                             MedicationID = 46,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7507),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4694),
                             Description = "SNRI for depression and anxiety",
                             MedicationForm = 2,
                             Name = "Venlafaxine Capsule",
                             SideEffects = "Nausea, Dry mouth",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7510)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4697)
                         },
                         new
                         {
                             MedicationID = 47,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7516),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4701),
                             Description = "Sleep aid for insomnia",
                             MedicationForm = 1,
                             Name = "Melatonin Tablet",
                             SideEffects = "Drowsiness, Headache",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7520)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4704)
                         },
                         new
                         {
                             MedicationID = 48,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7525),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4709),
                             Description = "Sedative for short-term insomnia",
                             MedicationForm = 1,
                             Name = "Zolpidem Tablet",
                             SideEffects = "Drowsiness, Dizziness",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7529)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4712)
                         },
                         new
                         {
                             MedicationID = 49,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7535),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4716),
                             Description = "Statin for cholesterol reduction",
                             MedicationForm = 1,
                             Name = "Simvastatin Tablet",
                             SideEffects = "Muscle pain, Digestive issues",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7539)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4719)
                         },
                         new
                         {
                             MedicationID = 50,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7547),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4723),
                             Description = "ACE inhibitor for blood pressure",
                             MedicationForm = 1,
                             Name = "Lisinopril Tablet",
                             SideEffects = "Cough, Dizziness",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(7551)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 199, DateTimeKind.Local).AddTicks(4726)
                         });
                 });
 
@@ -1237,8 +914,13 @@ namespace RoshettaProAPI.Infrustructure.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<int?>("EmergencyContactID")
-                        .HasColumnType("int");
+                    b.Property<string>("EmergencyContactName")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("EmergencyContactPhone")
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
@@ -1269,8 +951,6 @@ namespace RoshettaProAPI.Infrustructure.Migrations
 
                     b.HasKey("PatientID");
 
-                    b.HasIndex("EmergencyContactID");
-
                     b.ToTable("Patients");
 
                     b.HasData(
@@ -1279,150 +959,160 @@ namespace RoshettaProAPI.Infrustructure.Migrations
                             PatientID = 1,
                             Address = "123 Cairo Street, Cairo",
                             BloodType = 1,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 564, DateTimeKind.Local).AddTicks(7115),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(4680),
                             DateOfBirth = new DateTime(1985, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "youssef.ahmed@example.com",
-                            EmergencyContactID = 1,
+                            EmergencyContactName = "Ali Ahmed",
+                            EmergencyContactPhone = "+201300000011",
                             FirstName = "Youssef",
                             Gender = 1,
                             LastName = "Ahmed",
                             PhoneNumber = "+201300000001",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 564, DateTimeKind.Local).AddTicks(7199)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(4757)
                         },
                         new
                         {
                             PatientID = 2,
                             Address = "456 Giza Road, Giza",
                             BloodType = 2,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 564, DateTimeKind.Local).AddTicks(7213),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(4768),
                             DateOfBirth = new DateTime(1990, 3, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "amina.fathy@example.com",
-                            EmergencyContactID = 2,
+                            EmergencyContactName = "Sara Fathy",
+                            EmergencyContactPhone = "+201300000012",
                             FirstName = "Amina",
                             Gender = 2,
                             LastName = "Fathy",
                             PhoneNumber = "+201300000002",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 564, DateTimeKind.Local).AddTicks(7217)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(4771)
                         },
                         new
                         {
                             PatientID = 3,
                             Address = "789 Alexandria Avenue, Alexandria",
                             BloodType = 3,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 564, DateTimeKind.Local).AddTicks(7226),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(4778),
                             DateOfBirth = new DateTime(1988, 8, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "omar.nabil@example.com",
-                            EmergencyContactID = 3,
+                            EmergencyContactName = "Nabil Omar",
+                            EmergencyContactPhone = "+201300000013",
                             FirstName = "Omar",
                             Gender = 1,
                             LastName = "Nabil",
                             PhoneNumber = "+201300000003",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 564, DateTimeKind.Local).AddTicks(7230)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(4781)
                         },
                         new
                         {
                             PatientID = 4,
                             Address = "101 Mansoura Lane, Mansoura",
                             BloodType = 4,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 564, DateTimeKind.Local).AddTicks(7241),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(4789),
                             DateOfBirth = new DateTime(1985, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "hassan.mahmoud@example.com",
-                            EmergencyContactID = 4,
+                            EmergencyContactName = "Mahmoud Hassan",
+                            EmergencyContactPhone = "+201300000014",
                             FirstName = "Hassan",
                             Gender = 1,
                             LastName = "Mahmoud",
                             PhoneNumber = "+201300000004",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 564, DateTimeKind.Local).AddTicks(7245)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(4792)
                         },
                         new
                         {
                             PatientID = 5,
                             Address = "202 Asyut Street, Asyut",
                             BloodType = 5,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 564, DateTimeKind.Local).AddTicks(7254),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(4799),
                             DateOfBirth = new DateTime(1992, 1, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "layla.omar@example.com",
-                            EmergencyContactID = 5,
+                            EmergencyContactName = "Omar Layla",
+                            EmergencyContactPhone = "+201300000015",
                             FirstName = "Layla",
                             Gender = 2,
                             LastName = "Omar",
                             PhoneNumber = "+201300000005",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 564, DateTimeKind.Local).AddTicks(7258)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(4802)
                         },
                         new
                         {
                             PatientID = 6,
                             Address = "303 Suez Road, Suez",
                             BloodType = 6,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 564, DateTimeKind.Local).AddTicks(7266),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(4808),
                             DateOfBirth = new DateTime(1995, 9, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "ahmed.maher@example.com",
-                            EmergencyContactID = 6,
+                            EmergencyContactName = "Maher Ahmed",
+                            EmergencyContactPhone = "+201300000016",
                             FirstName = "Ahmed",
                             Gender = 1,
                             LastName = "Maher",
                             PhoneNumber = "+201300000006",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 564, DateTimeKind.Local).AddTicks(7270)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(4811)
                         },
                         new
                         {
                             PatientID = 7,
                             Address = "404 Fayoum Street, Fayoum",
                             BloodType = 7,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 564, DateTimeKind.Local).AddTicks(7279),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(4819),
                             DateOfBirth = new DateTime(1987, 4, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "nada.ali@example.com",
-                            EmergencyContactID = 7,
+                            EmergencyContactName = "Ali Nada",
+                            EmergencyContactPhone = "+201300000017",
                             FirstName = "Nada",
                             Gender = 2,
                             LastName = "Ali",
                             PhoneNumber = "+201300000007",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 564, DateTimeKind.Local).AddTicks(7283)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(4822)
                         },
                         new
                         {
                             PatientID = 8,
                             Address = "505 Luxor Avenue, Luxor",
                             BloodType = 8,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 564, DateTimeKind.Local).AddTicks(7292),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(4828),
                             DateOfBirth = new DateTime(1989, 2, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "mona.yasser@example.com",
-                            EmergencyContactID = 8,
+                            EmergencyContactName = "Yasser Mona",
+                            EmergencyContactPhone = "+201300000018",
                             FirstName = "Mona",
                             Gender = 2,
                             LastName = "Yasser",
                             PhoneNumber = "+201300000008",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 564, DateTimeKind.Local).AddTicks(7296)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(4831)
                         },
                         new
                         {
                             PatientID = 9,
                             Address = "606 Aswan Road, Aswan",
                             BloodType = 1,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 564, DateTimeKind.Local).AddTicks(7435),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(4838),
                             DateOfBirth = new DateTime(1983, 11, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "hany.ibrahim@example.com",
-                            EmergencyContactID = 9,
+                            EmergencyContactName = "Ibrahim Hany",
+                            EmergencyContactPhone = "+201300000019",
                             FirstName = "Hany",
                             Gender = 1,
                             LastName = "Ibrahim",
                             PhoneNumber = "+201300000009",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 564, DateTimeKind.Local).AddTicks(7440)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(4841)
                         },
                         new
                         {
                             PatientID = 10,
                             Address = "707 Hurghada Street, Hurghada",
                             BloodType = 5,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 564, DateTimeKind.Local).AddTicks(7449),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(4847),
                             DateOfBirth = new DateTime(1991, 6, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "dina.hassan@example.com",
-                            EmergencyContactID = 10,
+                            EmergencyContactName = "Hassan Dina",
+                            EmergencyContactPhone = "+201300000020",
                             FirstName = "Dina",
                             Gender = 2,
                             LastName = "Hassan",
                             PhoneNumber = "+201300000010",
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 564, DateTimeKind.Local).AddTicks(7453)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 197, DateTimeKind.Local).AddTicks(4850)
                         });
                 });
 
@@ -1433,9 +1123,6 @@ namespace RoshettaProAPI.Infrustructure.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("XrayID"));
-
-                    b.Property<int?>("CreatedBy")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedTime")
                         .ValueGeneratedOnAdd()
@@ -1459,9 +1146,6 @@ namespace RoshettaProAPI.Infrustructure.Migrations
                         .HasColumnType("nvarchar(500)");
 
                     b.Property<int>("PatientID")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("UpdatedBy")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("UpdatedTime")
@@ -1491,130 +1175,130 @@ namespace RoshettaProAPI.Infrustructure.Migrations
                         new
                         {
                             XrayID = 1,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(3000),
-                            DateTaken = new DateTime(2024, 8, 20, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(2958),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(836),
+                            DateTaken = new DateTime(2024, 8, 20, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(796),
                             DoctorID = 1,
                             LabName = "Cairo Lab",
                             Notes = "Possible pneumonia",
                             PatientID = 1,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(3005),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(839),
                             XrayImageURL = "http://example.com/xray1.png",
                             XrayType = "Chest"
                         },
                         new
                         {
                             XrayID = 2,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(3019),
-                            DateTaken = new DateTime(2024, 8, 21, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(3013),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(849),
+                            DateTaken = new DateTime(2024, 8, 21, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(844),
                             DoctorID = 2,
                             LabName = "Alexandria Lab",
                             Notes = "Spinal alignment check",
                             PatientID = 2,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(3023),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(852),
                             XrayImageURL = "http://example.com/xray2.png",
                             XrayType = "Spine"
                         },
                         new
                         {
                             XrayID = 3,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(3034),
-                            DateTaken = new DateTime(2024, 8, 22, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(3028),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(861),
+                            DateTaken = new DateTime(2024, 8, 22, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(857),
                             DoctorID = 3,
                             LabName = "Giza Lab",
                             Notes = "ACL injury",
                             PatientID = 3,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(3038),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(864),
                             XrayImageURL = "http://example.com/xray3.png",
                             XrayType = "Knee"
                         },
                         new
                         {
                             XrayID = 4,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(3048),
-                            DateTaken = new DateTime(2024, 8, 23, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(3043),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(873),
+                            DateTaken = new DateTime(2024, 8, 23, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(869),
                             DoctorID = 4,
                             LabName = "Luxor Lab",
                             Notes = "Head trauma",
                             PatientID = 4,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(3052),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(876),
                             XrayImageURL = "http://example.com/xray4.png",
                             XrayType = "Skull"
                         },
                         new
                         {
                             XrayID = 5,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(3063),
-                            DateTaken = new DateTime(2024, 8, 24, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(3057),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(884),
+                            DateTaken = new DateTime(2024, 8, 24, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(880),
                             DoctorID = 5,
                             LabName = "Aswan Lab",
                             Notes = "Abdominal pain investigation",
                             PatientID = 5,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(3066),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(887),
                             XrayImageURL = "http://example.com/xray5.png",
                             XrayType = "Abdomen"
                         },
                         new
                         {
                             XrayID = 6,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(3077),
-                            DateTaken = new DateTime(2024, 8, 25, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(3071),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(897),
+                            DateTaken = new DateTime(2024, 8, 25, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(892),
                             DoctorID = 6,
                             LabName = "Cairo Lab",
                             Notes = "Lung infection",
                             PatientID = 6,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(3081),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(900),
                             XrayImageURL = "http://example.com/xray6.png",
                             XrayType = "Chest"
                         },
                         new
                         {
                             XrayID = 7,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(3092),
-                            DateTaken = new DateTime(2024, 8, 26, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(3086),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(908),
+                            DateTaken = new DateTime(2024, 8, 26, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(904),
                             DoctorID = 7,
                             LabName = "Alexandria Lab",
                             Notes = "Lower back pain",
                             PatientID = 7,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(3096),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(911),
                             XrayImageURL = "http://example.com/xray7.png",
                             XrayType = "Spine"
                         },
                         new
                         {
                             XrayID = 8,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(3106),
-                            DateTaken = new DateTime(2024, 8, 27, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(3101),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(920),
+                            DateTaken = new DateTime(2024, 8, 27, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(915),
                             DoctorID = 8,
                             LabName = "Giza Lab",
                             Notes = "Post-surgery check",
                             PatientID = 8,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(3110),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(923),
                             XrayImageURL = "http://example.com/xray8.png",
                             XrayType = "Knee"
                         },
                         new
                         {
                             XrayID = 9,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(3121),
-                            DateTaken = new DateTime(2024, 8, 28, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(3115),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(931),
+                            DateTaken = new DateTime(2024, 8, 28, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(927),
                             DoctorID = 9,
                             LabName = "Luxor Lab",
                             Notes = "Concussion follow-up",
                             PatientID = 9,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(3124),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(934),
                             XrayImageURL = "http://example.com/xray9.png",
                             XrayType = "Skull"
                         },
                         new
                         {
                             XrayID = 10,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(3135),
-                            DateTaken = new DateTime(2024, 8, 29, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(3130),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(943),
+                            DateTaken = new DateTime(2024, 8, 29, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(938),
                             DoctorID = 10,
                             LabName = "Aswan Lab",
                             Notes = "Routine check",
                             PatientID = 10,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 572, DateTimeKind.Local).AddTicks(3139),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 202, DateTimeKind.Local).AddTicks(946),
                             XrayImageURL = "http://example.com/xray10.png",
                             XrayType = "Abdomen"
                         });
@@ -1627,9 +1311,6 @@ namespace RoshettaProAPI.Infrustructure.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PrescriptionID"));
-
-                    b.Property<int?>("CreatedBy")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedTime")
                         .ValueGeneratedOnAdd()
@@ -1653,9 +1334,6 @@ namespace RoshettaProAPI.Infrustructure.Migrations
                     b.Property<int>("PatientID")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UpdatedBy")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("UpdatedTime")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
@@ -1673,102 +1351,102 @@ namespace RoshettaProAPI.Infrustructure.Migrations
                         new
                         {
                             PrescriptionID = 1,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1386),
-                            DateIssued = new DateTime(2024, 8, 25, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1344),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9552),
+                            DateIssued = new DateTime(2024, 8, 25, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9513),
                             DoctorID = 1,
                             Notes = "Take with food",
                             PatientID = 1,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1391)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9556)
                         },
                         new
                         {
                             PrescriptionID = 2,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1404),
-                            DateIssued = new DateTime(2024, 8, 26, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1399),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9565),
+                            DateIssued = new DateTime(2024, 8, 26, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9562),
                             DoctorID = 2,
                             Notes = "Take before bed",
                             PatientID = 2,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1408)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9568)
                         },
                         new
                         {
                             PrescriptionID = 3,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1418),
-                            DateIssued = new DateTime(2024, 8, 27, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1414),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9576),
+                            DateIssued = new DateTime(2024, 8, 27, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9573),
                             DoctorID = 3,
                             Notes = "Take every 8 hours",
                             PatientID = 3,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1422)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9579)
                         },
                         new
                         {
                             PrescriptionID = 4,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1432),
-                            DateIssued = new DateTime(2024, 8, 28, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1427),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9587),
+                            DateIssued = new DateTime(2024, 8, 28, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9583),
                             DoctorID = 4,
                             Notes = "Take every morning",
                             PatientID = 4,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1436)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9590)
                         },
                         new
                         {
                             PrescriptionID = 5,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1446),
-                            DateIssued = new DateTime(2024, 8, 29, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1441),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9597),
+                            DateIssued = new DateTime(2024, 8, 29, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9594),
                             DoctorID = 5,
                             Notes = "Take every night",
                             PatientID = 5,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1450)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9600)
                         },
                         new
                         {
                             PrescriptionID = 6,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1459),
-                            DateIssued = new DateTime(2024, 8, 30, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1455),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9608),
+                            DateIssued = new DateTime(2024, 8, 30, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9604),
                             DoctorID = 6,
                             Notes = "Take before meals",
                             PatientID = 6,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1463)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9611)
                         },
                         new
                         {
                             PrescriptionID = 7,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1473),
-                            DateIssued = new DateTime(2024, 8, 31, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1469),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9618),
+                            DateIssued = new DateTime(2024, 8, 31, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9615),
                             DoctorID = 7,
                             Notes = "Take every 12 hours",
                             PatientID = 7,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1477)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9621)
                         },
                         new
                         {
                             PrescriptionID = 8,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1487),
-                            DateIssued = new DateTime(2024, 9, 1, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1483),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9629),
+                            DateIssued = new DateTime(2024, 9, 1, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9625),
                             DoctorID = 8,
                             Notes = "Take with water",
                             PatientID = 8,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1491)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9632)
                         },
                         new
                         {
                             PrescriptionID = 9,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1501),
-                            DateIssued = new DateTime(2024, 9, 2, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1497),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9640),
+                            DateIssued = new DateTime(2024, 9, 2, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9636),
                             DoctorID = 9,
                             Notes = "Take on an empty stomach",
                             PatientID = 9,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1505)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9643)
                         },
                         new
                         {
                             PrescriptionID = 10,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1515),
-                            DateIssued = new DateTime(2024, 9, 3, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1511),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9650),
+                            DateIssued = new DateTime(2024, 9, 3, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9647),
                             DoctorID = 10,
                             Notes = "Take before sleeping",
                             PatientID = 10,
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 568, DateTimeKind.Local).AddTicks(1519)
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 198, DateTimeKind.Local).AddTicks(9653)
                         });
                 });
 
@@ -1779,9 +1457,6 @@ namespace RoshettaProAPI.Infrustructure.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PrescriptionMedicationID"));
-
-                    b.Property<int?>("CreatedBy")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedTime")
                         .ValueGeneratedOnAdd()
@@ -1818,9 +1493,6 @@ namespace RoshettaProAPI.Infrustructure.Migrations
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("UpdatedBy")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("UpdatedTime")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
@@ -1838,154 +1510,143 @@ namespace RoshettaProAPI.Infrustructure.Migrations
                         new
                         {
                             PrescriptionMedicationID = 1,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9151),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2740),
                             Dosage = 500,
                             DosageUnit = "mg",
-                            EndDate = new DateTime(2024, 9, 14, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9141),
+                            EndDate = new DateTime(2024, 9, 14, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2732),
                             Frequency = "Twice a day",
                             Instructions = "Take with food",
                             MedicationID = 1,
                             PrescriptionID = 1,
-                            StartDate = new DateTime(2024, 8, 25, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9100),
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9155)
+                            StartDate = new DateTime(2024, 8, 25, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2696),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2744)
                         },
                         new
                         {
                             PrescriptionMedicationID = 2,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9173),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2757),
                             Dosage = 250,
                             DosageUnit = "mg",
-                            EndDate = new DateTime(2024, 9, 13, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9168),
+                            EndDate = new DateTime(2024, 9, 13, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2754),
                             Frequency = "Once a day",
                             Instructions = "Take before bed",
                             MedicationID = 2,
                             PrescriptionID = 2,
-                            StartDate = new DateTime(2024, 8, 26, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9164),
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9177)
+                            StartDate = new DateTime(2024, 8, 26, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2750),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2761)
                         },
                         new
                         {
                             PrescriptionMedicationID = 3,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9193),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2852),
                             Dosage = 100,
                             DosageUnit = "mg",
-                            EndDate = new DateTime(2024, 9, 12, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9188),
+                            EndDate = new DateTime(2024, 9, 12, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2848),
                             Frequency = "Every 8 hours",
                             Instructions = "Take every 8 hours",
                             MedicationID = 3,
                             PrescriptionID = 3,
-                            StartDate = new DateTime(2024, 8, 27, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9184),
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9197)
+                            StartDate = new DateTime(2024, 8, 27, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2843),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2855)
                         },
                         new
                         {
                             PrescriptionMedicationID = 4,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9212),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2868),
                             Dosage = 200,
                             DosageUnit = "mg",
-                            EndDate = new DateTime(2024, 9, 11, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9207),
+                            EndDate = new DateTime(2024, 9, 11, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2864),
                             Frequency = "Every morning",
                             Instructions = "Take every morning",
                             MedicationID = 4,
                             PrescriptionID = 4,
-                            StartDate = new DateTime(2024, 8, 28, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9203),
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9216)
+                            StartDate = new DateTime(2024, 8, 28, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2861),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2871)
                         },
                         new
                         {
                             PrescriptionMedicationID = 5,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9231),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2882),
                             Dosage = 150,
                             DosageUnit = "mg",
-                            EndDate = new DateTime(2024, 9, 10, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9226),
+                            EndDate = new DateTime(2024, 9, 10, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2878),
                             Frequency = "Every night",
                             Instructions = "Take every night",
                             MedicationID = 5,
                             PrescriptionID = 5,
-                            StartDate = new DateTime(2024, 8, 29, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9222),
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9234)
+                            StartDate = new DateTime(2024, 8, 29, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2875),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2885)
                         },
                         new
                         {
                             PrescriptionMedicationID = 6,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9249),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2897),
                             Dosage = 500,
                             DosageUnit = "mg",
-                            EndDate = new DateTime(2024, 9, 9, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9245),
+                            EndDate = new DateTime(2024, 9, 9, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2893),
                             Frequency = "Before meals",
                             Instructions = "Take before meals",
                             MedicationID = 6,
                             PrescriptionID = 6,
-                            StartDate = new DateTime(2024, 8, 30, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9240),
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9253)
+                            StartDate = new DateTime(2024, 8, 30, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2890),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2900)
                         },
                         new
                         {
                             PrescriptionMedicationID = 7,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9268),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2911),
                             Dosage = 100,
                             DosageUnit = "mg",
-                            EndDate = new DateTime(2024, 9, 8, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9264),
+                            EndDate = new DateTime(2024, 9, 8, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2908),
                             Frequency = "Every 12 hours",
                             Instructions = "Take every 12 hours",
                             MedicationID = 7,
                             PrescriptionID = 7,
-                            StartDate = new DateTime(2024, 8, 31, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9259),
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9272)
+                            StartDate = new DateTime(2024, 8, 31, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2905),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2914)
                         },
                         new
                         {
                             PrescriptionMedicationID = 8,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9287),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2926),
                             Dosage = 75,
                             DosageUnit = "mg",
-                            EndDate = new DateTime(2024, 9, 7, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9283),
+                            EndDate = new DateTime(2024, 9, 7, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2922),
                             Frequency = "With water",
                             Instructions = "Take with water",
                             MedicationID = 8,
                             PrescriptionID = 8,
-                            StartDate = new DateTime(2024, 9, 1, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9278),
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9291)
+                            StartDate = new DateTime(2024, 9, 1, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2919),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2929)
                         },
                         new
                         {
                             PrescriptionMedicationID = 9,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9306),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2941),
                             Dosage = 50,
                             DosageUnit = "mg",
-                            EndDate = new DateTime(2024, 9, 6, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9301),
+                            EndDate = new DateTime(2024, 9, 6, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2937),
                             Frequency = "On an empty stomach",
                             Instructions = "Take on an empty stomach",
                             MedicationID = 9,
                             PrescriptionID = 9,
-                            StartDate = new DateTime(2024, 9, 2, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9297),
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9310)
+                            StartDate = new DateTime(2024, 9, 2, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2933),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2943)
                         },
                         new
                         {
                             PrescriptionMedicationID = 10,
-                            CreatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9325),
+                            CreatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2955),
                             Dosage = 300,
                             DosageUnit = "mg",
-                            EndDate = new DateTime(2024, 9, 5, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9320),
+                            EndDate = new DateTime(2024, 9, 5, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2951),
                             Frequency = "Before sleeping",
                             Instructions = "Take before sleeping",
                             MedicationID = 10,
                             PrescriptionID = 10,
-                            StartDate = new DateTime(2024, 9, 3, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9316),
-                            UpdatedTime = new DateTime(2024, 9, 4, 15, 28, 18, 569, DateTimeKind.Local).AddTicks(9329)
+                            StartDate = new DateTime(2024, 9, 3, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2948),
+                            UpdatedTime = new DateTime(2024, 9, 4, 19, 8, 0, 200, DateTimeKind.Local).AddTicks(2958)
                         });
-                });
-
-            modelBuilder.Entity("RoshettaProAPI.Data.Entities.Doctor", b =>
-                {
-                    b.HasOne("RoshettaProAPI.Data.Entities.Clinic", "Clinic")
-                        .WithMany("Doctors")
-                        .HasForeignKey("ClinicID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Clinic");
                 });
 
             modelBuilder.Entity("RoshettaProAPI.Data.Entities.MedicalHistory", b =>
@@ -2005,16 +1666,6 @@ namespace RoshettaProAPI.Infrustructure.Migrations
                     b.Navigation("Doctor");
 
                     b.Navigation("Patient");
-                });
-
-            modelBuilder.Entity("RoshettaProAPI.Data.Entities.Patient", b =>
-                {
-                    b.HasOne("RoshettaProAPI.Data.Entities.Contact", "EmergencyContact")
-                        .WithMany("EmergencyPatients")
-                        .HasForeignKey("EmergencyContactID")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.Navigation("EmergencyContact");
                 });
 
             modelBuilder.Entity("RoshettaProAPI.Data.Entities.PatientXray", b =>
@@ -2072,16 +1723,6 @@ namespace RoshettaProAPI.Infrustructure.Migrations
                     b.Navigation("Medication");
 
                     b.Navigation("Prescription");
-                });
-
-            modelBuilder.Entity("RoshettaProAPI.Data.Entities.Clinic", b =>
-                {
-                    b.Navigation("Doctors");
-                });
-
-            modelBuilder.Entity("RoshettaProAPI.Data.Entities.Contact", b =>
-                {
-                    b.Navigation("EmergencyPatients");
                 });
 
             modelBuilder.Entity("RoshettaProAPI.Data.Entities.Doctor", b =>

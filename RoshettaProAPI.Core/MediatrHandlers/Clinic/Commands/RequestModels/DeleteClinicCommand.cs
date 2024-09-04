@@ -1,10 +1,10 @@
-using MediatR;
-using RoshettaProAPI.Core.Base.ApiResponse;
-using RoshettaProAPI.Core.MediatrHandlers.Clinic.Queries.Response;
-
-namespace RoshettaProAPI.Core.MediatrHandlers.Clinic.Commands.RequestModels;
-
-public class DeleteClinicCommand :IRequest<ApiResponse<ClinicResponseDto>>
-{
-    public int ClinicID { get; set; }
-}
+// using MediatR;
+// using RoshettaProAPI.Core.Base.ApiResponse;
+// using RoshettaProAPI.Core.MediatrHandlers.Clinic.Queries.Response;
+//
+// namespace RoshettaProAPI.Core.MediatrHandlers.Clinic.Commands.RequestModels;
+//
+// public class DeleteClinicCommand :IRequest<ApiResponse<ClinicResponseDto>>
+// {
+//     public int ClinicID { get; set; }
+// }

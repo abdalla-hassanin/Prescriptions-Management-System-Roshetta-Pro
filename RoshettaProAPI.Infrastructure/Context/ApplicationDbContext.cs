@@ -11,8 +11,6 @@ public class ApplicationDbContext : DbContext
     }
 
     public DbSet<Patient> Patients { get; set; }
-    public DbSet<Contact> Contacts { get; set; }
-    public DbSet<Clinic> Clinics { get; set; }
     public DbSet<Doctor> Doctors { get; set; }
     public DbSet<Prescription> Prescriptions { get; set; }
     public DbSet<Medication> Medications { get; set; }
@@ -23,8 +21,6 @@ public class ApplicationDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(new PatientConfiguration());
-        modelBuilder.ApplyConfiguration(new ContactConfiguration());
-        modelBuilder.ApplyConfiguration(new ClinicConfiguration());
         modelBuilder.ApplyConfiguration(new DoctorConfiguration());
         modelBuilder.ApplyConfiguration(new PrescriptionConfiguration());
         modelBuilder.ApplyConfiguration(new MedicationConfiguration());

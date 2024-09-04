@@ -13,7 +13,8 @@ public class Patient
     public string? ImageURL { get; set; }
     public string Address { get; set; }
 
-    public int? EmergencyContactID { get; set; }
+    public string? EmergencyContactName { get; set; }
+    public string? EmergencyContactPhone { get; set; }
     
 
     
@@ -25,7 +26,6 @@ public class Patient
     public DateTime CreatedTime { get; set; }
     public DateTime UpdatedTime { get; set; }
 
-    public Contact EmergencyContact { get; set; }
     public ICollection<MedicalHistory> MedicalHistories { get; set; }
     public ICollection<Prescription> Prescriptions { get; set; }
     public ICollection<PatientXray> PatientXrays { get; set; }

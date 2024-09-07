@@ -75,6 +75,20 @@ public class GenericRepository<T> : IGenericRepository<T> where T : class
 
         return await query.Where(predicate).ToListAsync(cancellationToken);
     }
+    public IQueryable<T> Find(
+        Expression<Func<T, bool>> predicate,
+        Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null)
+    {
+        IQueryable<T> query = _dbSet;
+    
+        if (include != null)
+        {
+            query = include(query);
+        }
+    
+        return query.Where(predicate); 
+    }
+
 
     public async Task<bool> AnyAsync(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken = default)
     {

@@ -5,5 +5,5 @@ namespace RoshettaProAPI.Service.IService;
 
 public interface IMedicalHistoryService : IGenericService<MedicalHistory>
 {
-    // Add any MedicalHistory-specific methods here
+    // Add any Medication-specific methods here
 }

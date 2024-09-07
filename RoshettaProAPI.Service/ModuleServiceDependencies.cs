@@ -17,7 +17,7 @@ public static class ModuleServiceDependencies
         services.AddScoped<IMedicalHistoryService, MedicalHistoryService>();
         services.AddScoped<IMedicationService, MedicationService>();
         services.AddScoped<IPatientService, PatientService>();
-        services.AddScoped<IPatientXrayService, PatientXrayService>();
+        services.AddScoped<IXrayService, XrayService>();
         services.AddScoped<IPrescriptionService, PrescriptionService>();
         services.AddScoped<IPrescriptionMedicationService, PrescriptionMedicationService>();
 

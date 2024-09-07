@@ -14,17 +14,17 @@ namespace RoshettaProAPI.Service.Base
         }
 
         // CRUD Operations
-        public async Task<T> GetByIdAsync(int id, CancellationToken cancellationToken = default)
+        public virtual async Task<T> GetByIdAsync(int id, CancellationToken cancellationToken = default)
         {
             return await _unitOfWork.Repository<T>().GetByIdAsync(id, cancellationToken);
         }
 
-        public async Task<IEnumerable<T>> GetAllAsync(CancellationToken cancellationToken = default)
+        public virtual async Task<IEnumerable<T>> GetAllAsync(CancellationToken cancellationToken = default)
         {
             return await _unitOfWork.Repository<T>().GetAllAsync(cancellationToken);
         }
 
-        public async Task AddAsync(T entity, CancellationToken cancellationToken = default)
+        public virtual async Task AddAsync(T entity, CancellationToken cancellationToken = default)
         {
             await _unitOfWork.Repository<T>().AddAsync(entity, cancellationToken);
             await _unitOfWork.CompleteAsync(cancellationToken);
@@ -36,7 +36,7 @@ namespace RoshettaProAPI.Service.Base
             await _unitOfWork.CompleteAsync(cancellationToken);
         }
 
-        public async Task UpdateAsync(T entity, CancellationToken cancellationToken = default)
+        public virtual async Task UpdateAsync(T entity, CancellationToken cancellationToken = default)
         {
            await _unitOfWork.Repository<T>().UpdateAsync(entity, cancellationToken);
             await _unitOfWork.CompleteAsync(cancellationToken);
@@ -48,7 +48,7 @@ namespace RoshettaProAPI.Service.Base
             await _unitOfWork.CompleteAsync(cancellationToken);
         }
 
-        public async Task RemoveAsync(T entity, CancellationToken cancellationToken = default)
+        public virtual async Task RemoveAsync(T entity, CancellationToken cancellationToken = default)
         {
             await _unitOfWork.Repository<T>().RemoveAsync(entity, cancellationToken);
             await _unitOfWork.CompleteAsync(cancellationToken);
@@ -79,7 +79,7 @@ namespace RoshettaProAPI.Service.Base
         }
 
         // Pagination and Sorting
-        public async Task<(IEnumerable<T> Items, int TotalCount)> GetPagedAsync(Expression<Func<T, bool>> predicate, int pageNumber, int pageSize, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null, CancellationToken cancellationToken = default)
+        public virtual async Task<(IEnumerable<T> Items, int TotalCount)> GetPagedAsync(Expression<Func<T, bool>> predicate, int pageNumber, int pageSize, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null, CancellationToken cancellationToken = default)
         {
             return await _unitOfWork.Repository<T>().GetPagedAsync(predicate, pageNumber, pageSize, orderBy, include, cancellationToken);
         }

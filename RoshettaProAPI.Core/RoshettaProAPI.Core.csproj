@@ -22,5 +22,13 @@
         <ProjectReference Include="..\RoshettaProAPI.Service\RoshettaProAPI.Service.csproj"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="MediatrHandlers\PrescriptionMedication\Commands\Handler\" />
+      <Folder Include="MediatrHandlers\PrescriptionMedication\Commands\RequestModels\" />
+      <Folder Include="MediatrHandlers\PrescriptionMedication\Commands\Validator\" />
+      <Folder Include="MediatrHandlers\PrescriptionMedication\Queries\Handler\" />
+      <Folder Include="MediatrHandlers\PrescriptionMedication\Queries\RequestModels\" />
+      <Folder Include="MediatrHandlers\PrescriptionMedication\Queries\Response\" />
+    </ItemGroup>
 
 </Project>

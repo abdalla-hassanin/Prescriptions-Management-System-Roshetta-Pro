@@ -11,5 +11,5 @@ public class PatientService : GenericService<Patient>, IPatientService
     {
     }
 
-    // Implement any Patient-specific methods here
+    // Implement any Medication-specific methods here
 }

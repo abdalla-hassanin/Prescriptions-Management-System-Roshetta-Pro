@@ -5,5 +5,5 @@ namespace RoshettaProAPI.Service.IService;
 
 public interface IPatientService : IGenericService<Patient>
 {
-    // Add any Patient-specific methods here
+    // Add any Medication-specific methods here
 }

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using RoshettaProAPI.Core.Base.ApiResponse;
 
-namespace RoshettaProAPI.Core.Base.Middleware
+namespace RoshettaProAPI.Core.Base.MiddleWare
 {
     public class ErrorHandlerMiddleware
     {

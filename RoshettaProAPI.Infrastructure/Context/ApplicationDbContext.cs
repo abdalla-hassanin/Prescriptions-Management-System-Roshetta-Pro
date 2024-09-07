@@ -16,7 +16,7 @@ public class ApplicationDbContext : DbContext
     public DbSet<Medication> Medications { get; set; }
     public DbSet<PrescriptionMedication> PrescriptionMedications { get; set; }
     public DbSet<MedicalHistory> MedicalHistories { get; set; }
-    public DbSet<PatientXray> PatientXrays { get; set; }
+    public DbSet<Xray> PatientXrays { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -26,7 +26,7 @@ public class ApplicationDbContext : DbContext
         modelBuilder.ApplyConfiguration(new MedicationConfiguration());
         modelBuilder.ApplyConfiguration(new PrescriptionMedicationConfiguration());
         modelBuilder.ApplyConfiguration(new MedicalHistoryConfiguration());
-        modelBuilder.ApplyConfiguration(new PatientXrayConfiguration());
+        modelBuilder.ApplyConfiguration(new XrayConfiguration());
 
         base.OnModelCreating(modelBuilder);
     }

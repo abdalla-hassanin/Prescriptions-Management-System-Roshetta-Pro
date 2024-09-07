@@ -11,5 +11,5 @@ public class MedicalHistoryService : GenericService<MedicalHistory>, IMedicalHis
     {
     }
 
-    // Implement any MedicalHistory-specific methods here
+    // Implement any Medication-specific methods here
 }

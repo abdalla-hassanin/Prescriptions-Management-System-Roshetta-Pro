@@ -184,7 +184,7 @@ namespace RoshettaProAPI.Infrustructure.Migrations
                         });
                 });
 
-            modelBuilder.Entity("RoshettaProAPI.Data.Entities.MedicalHistory", b =>
+            modelBuilder.Entity("RoshettaProAPI.Data.Entities.Medication", b =>
                 {
                     b.Property<int>("MedicalHistoryID")
                         .ValueGeneratedOnAdd()
@@ -885,7 +885,7 @@ namespace RoshettaProAPI.Infrustructure.Migrations
                         });
                 });
 
-            modelBuilder.Entity("RoshettaProAPI.Data.Entities.Patient", b =>
+            modelBuilder.Entity("RoshettaProAPI.Data.Entities.Medication", b =>
                 {
                     b.Property<int>("PatientID")
                         .ValueGeneratedOnAdd()
@@ -1116,7 +1116,7 @@ namespace RoshettaProAPI.Infrustructure.Migrations
                         });
                 });
 
-            modelBuilder.Entity("RoshettaProAPI.Data.Entities.PatientXray", b =>
+            modelBuilder.Entity("RoshettaProAPI.Data.Entities.Medication", b =>
                 {
                     b.Property<int>("XrayID")
                         .ValueGeneratedOnAdd()
@@ -1649,7 +1649,7 @@ namespace RoshettaProAPI.Infrustructure.Migrations
                         });
                 });
 
-            modelBuilder.Entity("RoshettaProAPI.Data.Entities.MedicalHistory", b =>
+            modelBuilder.Entity("RoshettaProAPI.Data.Entities.Medication", b =>
                 {
                     b.HasOne("RoshettaProAPI.Data.Entities.Doctor", "Doctor")
                         .WithMany("MedicalHistories")
@@ -1657,7 +1657,7 @@ namespace RoshettaProAPI.Infrustructure.Migrations
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
-                    b.HasOne("RoshettaProAPI.Data.Entities.Patient", "Patient")
+                    b.HasOne("RoshettaProAPI.Data.Entities.Medication", "Medication")
                         .WithMany("MedicalHistories")
                         .HasForeignKey("PatientID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -1665,10 +1665,10 @@ namespace RoshettaProAPI.Infrustructure.Migrations
 
                     b.Navigation("Doctor");
 
-                    b.Navigation("Patient");
+                    b.Navigation("Medication");
                 });
 
-            modelBuilder.Entity("RoshettaProAPI.Data.Entities.PatientXray", b =>
+            modelBuilder.Entity("RoshettaProAPI.Data.Entities.Medication", b =>
                 {
                     b.HasOne("RoshettaProAPI.Data.Entities.Doctor", "Doctor")
                         .WithMany("PatientXrays")
@@ -1676,7 +1676,7 @@ namespace RoshettaProAPI.Infrustructure.Migrations
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
-                    b.HasOne("RoshettaProAPI.Data.Entities.Patient", "Patient")
+                    b.HasOne("RoshettaProAPI.Data.Entities.Medication", "Medication")
                         .WithMany("PatientXrays")
                         .HasForeignKey("PatientID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -1684,7 +1684,7 @@ namespace RoshettaProAPI.Infrustructure.Migrations
 
                     b.Navigation("Doctor");
 
-                    b.Navigation("Patient");
+                    b.Navigation("Medication");
                 });
 
             modelBuilder.Entity("RoshettaProAPI.Data.Entities.Prescription", b =>
@@ -1695,7 +1695,7 @@ namespace RoshettaProAPI.Infrustructure.Migrations
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
-                    b.HasOne("RoshettaProAPI.Data.Entities.Patient", "Patient")
+                    b.HasOne("RoshettaProAPI.Data.Entities.Medication", "Medication")
                         .WithMany("Prescriptions")
                         .HasForeignKey("PatientID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -1703,7 +1703,7 @@ namespace RoshettaProAPI.Infrustructure.Migrations
 
                     b.Navigation("Doctor");
 
-                    b.Navigation("Patient");
+                    b.Navigation("Medication");
                 });
 
             modelBuilder.Entity("RoshettaProAPI.Data.Entities.PrescriptionMedication", b =>
@@ -1739,7 +1739,7 @@ namespace RoshettaProAPI.Infrustructure.Migrations
                     b.Navigation("PrescriptionMedications");
                 });
 
-            modelBuilder.Entity("RoshettaProAPI.Data.Entities.Patient", b =>
+            modelBuilder.Entity("RoshettaProAPI.Data.Entities.Medication", b =>
                 {
                     b.Navigation("MedicalHistories");
 

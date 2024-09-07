@@ -28,5 +28,5 @@ public class Patient
 
     public ICollection<MedicalHistory> MedicalHistories { get; set; }
     public ICollection<Prescription> Prescriptions { get; set; }
-    public ICollection<PatientXray> PatientXrays { get; set; }
+    public ICollection<Xray> PatientXrays { get; set; }
 }

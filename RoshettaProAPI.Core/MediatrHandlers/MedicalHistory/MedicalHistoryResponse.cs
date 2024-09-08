@@ -1,5 +1,3 @@
-using RoshettaProAPI.Data.Enums;
-
 namespace RoshettaProAPI.Core.MediatrHandlers.MedicalHistory;
 
 public class MedicalHistoryResponse

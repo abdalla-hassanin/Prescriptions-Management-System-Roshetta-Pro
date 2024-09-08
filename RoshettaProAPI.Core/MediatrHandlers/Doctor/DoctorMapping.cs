@@ -1,5 +1,6 @@
 using AutoMapper;
-using RoshettaProAPI.Core.MediatrHandlers.Doctor.Commands.RequestModels;
+using RoshettaProAPI.Core.MediatrHandlers.Doctor.Commands.Create;
+using RoshettaProAPI.Core.MediatrHandlers.Doctor.Commands.Update;
 
 namespace RoshettaProAPI.Core.MediatrHandlers.Doctor;
 
@@ -7,11 +8,11 @@ public class DoctorMapping : Profile
 {
     public DoctorMapping()
     {
-        CreateMap<CreateDoctorCommand, DoctorResponse>()
+        CreateMap<CreateDoctorCommand, Data.Entities.Doctor>()
             .ForMember(dest => dest.CreatedTime, opt => opt.MapFrom(_ => DateTime.UtcNow))
             .ForMember(dest => dest.UpdatedTime, opt => opt.MapFrom(_ => DateTime.UtcNow));
 
-        CreateMap<UpdateDoctorCommand, DoctorResponse>()
+        CreateMap<UpdateDoctorCommand, Data.Entities.Doctor>()
             .ForMember(dest => dest.UpdatedTime, opt => opt.MapFrom(_ => DateTime.UtcNow))
             .ForAllMembers(opts => opts.Condition((src, dest, srcMember) => 
                 srcMember != null && 

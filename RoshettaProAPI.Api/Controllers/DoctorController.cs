@@ -3,8 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 using RoshettaProAPI.Api.Base;
 using RoshettaProAPI.Core.Base.ApiResponse;
 using RoshettaProAPI.Core.MediatrHandlers.Doctor;
-using RoshettaProAPI.Core.MediatrHandlers.Doctor.Commands.RequestModels;
-using RoshettaProAPI.Core.MediatrHandlers.Doctor.Queries.RequestModels;
+using RoshettaProAPI.Core.MediatrHandlers.Doctor.Commands.Create;
+using RoshettaProAPI.Core.MediatrHandlers.Doctor.Commands.Delete;
+using RoshettaProAPI.Core.MediatrHandlers.Doctor.Commands.Update;
+using RoshettaProAPI.Core.MediatrHandlers.Doctor.Queries.GetAll;
+using RoshettaProAPI.Core.MediatrHandlers.Doctor.Queries.GetById;
 
 namespace RoshettaProAPI.Api.Controllers
 {

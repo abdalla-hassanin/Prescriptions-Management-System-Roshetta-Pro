@@ -1,4 +1,3 @@
-using RoshettaProAPI.Data.Entities;
 using RoshettaProAPI.Data.Enums;
 
 namespace RoshettaProAPI.Core.MediatrHandlers.Patient;

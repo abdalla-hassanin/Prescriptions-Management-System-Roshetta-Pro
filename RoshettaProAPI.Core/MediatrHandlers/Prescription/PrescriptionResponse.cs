@@ -1,5 +1,3 @@
-using RoshettaProAPI.Core.MediatrHandlers.Prescription.Commands.Create;
-
 namespace RoshettaProAPI.Core.MediatrHandlers.Prescription;
 
 public class PrescriptionResponse

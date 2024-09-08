@@ -1,6 +1,5 @@
 using MediatR;
 using RoshettaProAPI.Core.Base.ApiResponse;
-using RoshettaProAPI.Core.MediatrHandlers.Xray;
 
 namespace RoshettaProAPI.Core.MediatrHandlers.Xray.Commands.Update;
 

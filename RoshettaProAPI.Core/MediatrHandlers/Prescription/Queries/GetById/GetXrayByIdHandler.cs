@@ -1,7 +1,6 @@
 using AutoMapper;
 using MediatR;
 using RoshettaProAPI.Core.Base.ApiResponse;
-using RoshettaProAPI.Core.MediatrHandlers.Prescription;
 using RoshettaProAPI.Service.IService;
 
 namespace RoshettaProAPI.Core.MediatrHandlers.Prescription.Queries.GetById

@@ -21,7 +21,7 @@ public static class ModuleServiceDependencies
         services.AddScoped<IPrescriptionService, PrescriptionService>();
         services.AddScoped<IPrescriptionMedicationService, PrescriptionMedicationService>();
 
-
+        services.AddScoped<IEmailService, EmailService>();
         return services;
     }
 }

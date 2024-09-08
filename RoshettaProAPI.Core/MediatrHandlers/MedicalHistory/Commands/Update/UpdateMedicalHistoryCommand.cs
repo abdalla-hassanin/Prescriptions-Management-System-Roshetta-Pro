@@ -1,7 +1,5 @@
 using MediatR;
 using RoshettaProAPI.Core.Base.ApiResponse;
-using RoshettaProAPI.Core.MediatrHandlers.MedicalHistory;
-using RoshettaProAPI.Data.Enums;
 
 namespace RoshettaProAPI.Core.MediatrHandlers.MedicalHistory.Commands.Update;
 

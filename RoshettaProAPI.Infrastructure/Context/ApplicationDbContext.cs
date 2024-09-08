@@ -1,10 +1,12 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using RoshettaProAPI.Data.Entities;
 using RoshettaProAPI.Infrustructure.Configurations;
 
 namespace RoshettaProAPI.Infrustructure.Context;
 
-public class ApplicationDbContext : DbContext
+public class ApplicationDbContext :IdentityDbContext<IdentityUser>
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
     {
@@ -20,6 +22,9 @@ public class ApplicationDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        base.OnModelCreating(modelBuilder);
+            
+        // Apply custom entity configurations
         modelBuilder.ApplyConfiguration(new PatientConfiguration());
         modelBuilder.ApplyConfiguration(new DoctorConfiguration());
         modelBuilder.ApplyConfiguration(new PrescriptionConfiguration());
@@ -28,6 +33,11 @@ public class ApplicationDbContext : DbContext
         modelBuilder.ApplyConfiguration(new MedicalHistoryConfiguration());
         modelBuilder.ApplyConfiguration(new XrayConfiguration());
 
-        base.OnModelCreating(modelBuilder);
+        // Seed roles
+        modelBuilder.Entity<IdentityRole>().HasData(
+            new IdentityRole { Name = "Admin", NormalizedName = "ADMIN" },
+            new IdentityRole { Name = "Doctor", NormalizedName = "DOCTOR" },
+            new IdentityRole { Name = "Patient", NormalizedName = "PATIENT" }
+        );
     }
 }

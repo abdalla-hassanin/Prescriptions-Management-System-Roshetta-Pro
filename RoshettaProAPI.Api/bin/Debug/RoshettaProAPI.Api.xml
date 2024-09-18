@@ -1,0 +1,631 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RoshettaProAPI.Api</name>
+    </assembly>
+    <members>
+        <member name="T:RoshettaProAPI.Api.Controllers.AuthController">
+            <summary>
+            Handles API endpoints related to user authentication and management.
+            </summary>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.AuthController.ConfirmEmail(System.String,System.String)">
+            <summary>
+            Confirms a user's email address.
+            </summary>
+            <remarks>
+            This endpoint does not require any specific roles.
+            </remarks>
+            <param name="userId">The ID of the user.</param>
+            <param name="token">The confirmation token.</param>
+            <returns>Confirmation of email address.</returns>
+            <response code="200">Returns success message if the email is confirmed.</response>
+            <response code="400">If the email confirmation fails.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.AuthController.ResendEmailConfirmation(RoshettaProAPI.Core.MediatrHandlers.Auth.Commands.ResendEmailConfirmation.ResendEmailConfirmationCommand)">
+            <summary>
+            Resends the email confirmation link.
+            </summary>
+            <remarks>
+            This endpoint does not require any specific roles.
+            </remarks>
+            <param name="command">The command containing user email.</param>
+            <returns>Confirmation of the email confirmation resend.</returns>
+            <response code="200">Returns success message if the email confirmation link is sent.</response>
+            <response code="400">If the email is already confirmed or invalid.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.AuthController.Login(RoshettaProAPI.Core.MediatrHandlers.Auth.Commands.Login.LoginCommand)">
+            <summary>
+            Logs in a user and provides a JWT token.
+            </summary>
+            <remarks>
+            This endpoint does not require any specific roles.
+            </remarks>
+            <param name="command">The command containing login credentials.</param>
+            <returns>JWT token if login is successful.</returns>
+            <response code="200">Returns JWT token if login is successful.</response>
+            <response code="400">If the login credentials are invalid or email is not confirmed.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.AuthController.Logout">
+            <summary>
+            Logs out a user by removing their refresh token.
+            </summary>
+            <remarks>
+            Requires the role <c>User</c>.
+            </remarks>
+            <returns>Confirmation of logout.</returns>
+            <response code="200">Returns success message if logout is successful.</response>
+            <response code="400">If no user is currently logged in.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.AuthController.ForgetPassword(RoshettaProAPI.Core.MediatrHandlers.Auth.Commands.ForgetPassword.ForgetPasswordCommand)">
+            <summary>
+            Initiates a password reset process by sending a reset link to the user.
+            </summary>
+            <remarks>
+            This endpoint does not require any specific roles.
+            </remarks>
+            <param name="command">The command containing user email.</param>
+            <returns>Confirmation of password reset initiation.</returns>
+            <response code="200">Returns success message if the password reset link is sent.</response>
+            <response code="400">If the email is not registered.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.AuthController.ResetPassword(RoshettaProAPI.Core.MediatrHandlers.Auth.Commands.ResetPassword.ResetPasswordCommand)">
+            <summary>
+            Resets the user's password using a reset token.
+            </summary>
+            <remarks>
+            This endpoint does not require any specific roles.
+            </remarks>
+            <param name="command">The command containing user ID, reset token, and new password.</param>
+            <returns>Confirmation of password reset.</returns>
+            <response code="200">Returns success message if the password is reset successfully.</response>
+            <response code="400">If the reset token is invalid or the user ID does not match.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.AuthController.ChangePassword(RoshettaProAPI.Core.MediatrHandlers.Auth.Commands.ChangePassword.ChangePasswordCommand)">
+            <summary>
+            Changes the user's password.
+            </summary>
+            <remarks>
+            Requires the role <c>User</c>.
+            </remarks>
+            <param name="command">The command containing current and new passwords.</param>
+            <returns>Confirmation of password change.</returns>
+            <response code="200">Returns success message if the password is changed successfully.</response>
+            <response code="400">If the current password is incorrect or the new password is invalid.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.AuthController.RefreshToken(RoshettaProAPI.Core.MediatrHandlers.Auth.Commands.RefreshToken.RefreshTokenCommand)">
+            <summary>
+            Refreshes the user's JWT token using a refresh token.
+            </summary>
+            <remarks>
+            This endpoint does not require any specific roles.
+            </remarks>
+            <param name="command">The command containing refresh token.</param>
+            <returns>New JWT token if refresh is successful.</returns>
+            <response code="200">Returns new JWT token if refresh is successful.</response>
+            <response code="400">If the refresh token is invalid or expired.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.AuthController.RevokeToken(RoshettaProAPI.Core.MediatrHandlers.Auth.Commands.RevokeToken.RevokeTokenCommand)">
+            <summary>
+            Revokes the user's refresh token.
+            </summary>
+            <remarks>
+            Requires the role <c>User</c>.
+            </remarks>
+            <param name="command">The command containing refresh token to revoke.</param>
+            <returns>Confirmation of token revocation.</returns>
+            <response code="200">Returns success message if the token is revoked successfully.</response>
+            <response code="400">If the refresh token is invalid or does not exist.</response>
+        </member>
+        <member name="T:RoshettaProAPI.Api.Controllers.DoctorController">
+            <summary>
+            Handles API endpoints related to Doctor operations.
+            </summary>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.DoctorController.GetAllDoctors(System.Threading.CancellationToken)">
+            <summary>
+            Retrieves all doctors.
+            </summary>
+            <remarks>
+            Requires the role "Admin".
+            </remarks>
+            <param name="cancellationToken">Cancellation token for the request.</param>
+            <returns>List of doctors.</returns>
+            <response code="200">Returns the list of doctors.</response>
+            <response code="403">Unauthorized access if the user does not have the required role.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.DoctorController.GetDoctorById(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Retrieves a specific doctor by their ID.
+            </summary>
+            <remarks>
+            Requires the role "Admin", "Doctor", or "Patient".
+            </remarks>
+            <param name="id">The ID of the doctor to retrieve.</param>
+            <param name="cancellationToken">Cancellation token for the request.</param>
+            <returns>Details of the specified doctor.</returns>
+            <response code="200">Returns the doctor details.</response>
+            <response code="404">If the doctor is not found.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.DoctorController.CreateDoctor(RoshettaProAPI.Core.MediatrHandlers.Doctor.Commands.Create.CreateDoctorCommand,System.Threading.CancellationToken)">
+            <summary>
+            Creates a new doctor.
+            </summary>
+            <remarks>
+            This endpoint does not require any specific roles.
+            </remarks>
+            <param name="command">The details of the doctor to create.</param>
+            <param name="cancellationToken">Cancellation token for the request.</param>
+            <returns>Confirmation of the doctor creation.</returns>
+            <response code="201">Doctor created successfully.</response>
+            <response code="400">If the doctor data is invalid or email is already registered.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.DoctorController.UpdateDoctor(System.Int32,RoshettaProAPI.Core.MediatrHandlers.Doctor.Commands.Update.UpdateDoctorCommand,System.Threading.CancellationToken)">
+            <summary>
+            Updates an existing doctor.
+            </summary>
+            <remarks>
+            Requires the role "Admin" or "Doctor".
+            </remarks>
+            <param name="id">The ID of the doctor to update.</param>
+            <param name="command">The updated doctor details.</param>
+            <param name="cancellationToken">Cancellation token for the request.</param>
+            <returns>Confirmation of the doctor update.</returns>
+            <response code="200">Doctor updated successfully.</response>
+            <response code="400">If the doctor ID in the URL does not match the request body or if the update data is invalid.</response>
+            <response code="404">If the doctor is not found.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.DoctorController.DeleteDoctor(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Deletes an existing doctor.
+            </summary>
+            <remarks>
+            Requires the role "Admin" or "Doctor".
+            </remarks>
+            <param name="id">The ID of the doctor to delete.</param>
+            <param name="cancellationToken">Cancellation token for the request.</param>
+            <returns>Confirmation of the doctor deletion.</returns>
+            <response code="200">Doctor deleted successfully.</response>
+            <response code="404">If the doctor is not found.</response>
+        </member>
+        <member name="T:RoshettaProAPI.Api.Controllers.MedicalHistoryController">
+            <summary>
+            Provides API endpoints for managing medical history records.
+            </summary>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.MedicalHistoryController.GetAllMedicalHistory(System.Threading.CancellationToken)">
+            <summary>
+            Retrieves all medical history records.
+            </summary>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>A collection of all medical history records.</returns>
+            <response code="200">Successfully retrieved the collection of medical history records.</response>
+            <response code="401">Authentication failed. User is not authenticated.</response>
+            <response code="403">Authorization failed. User does not have permission to access this resource.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.MedicalHistoryController.GetMedicalHistoryById(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Retrieves a specific medical history record by its unique identifier.
+            </summary>
+            <param name="id">The unique identifier of the medical history record.</param>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>The requested medical history record.</returns>
+            <response code="200">Successfully retrieved the medical history record.</response>
+            <response code="401">Authentication failed. User is not authenticated.</response>
+            <response code="403">Authorization failed. User does not have permission to access this resource.</response>
+            <response code="404">The medical history record with the specified ID was not found.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.MedicalHistoryController.CreateMedicalHistory(RoshettaProAPI.Core.MediatrHandlers.MedicalHistory.Commands.Create.CreateMedicalHistoryCommand,System.Threading.CancellationToken)">
+            <summary>
+            Creates a new medical history record.
+            </summary>
+            <param name="command">The data required to create a new medical history record.</param>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>The newly created medical history record.</returns>
+            <remarks>
+            Sample request:
+            
+                POST /api/MedicalHistory
+                {
+                    "diseaseName": "Diabetes",
+                    "diagnosisDate": "2023-09-01",
+                    "description": "Chronic disease related to high blood sugar levels."
+                }
+            
+            </remarks>
+            <response code="201">Successfully created the medical history record.</response>
+            <response code="400">The request data is invalid or incomplete.</response>
+            <response code="401">Authentication failed. User is not authenticated.</response>
+            <response code="403">Authorization failed. User does not have permission to create medical history records.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.MedicalHistoryController.UpdateMedicalHistory(System.Int32,RoshettaProAPI.Core.MediatrHandlers.MedicalHistory.Commands.Update.UpdateMedicalHistoryCommand,System.Threading.CancellationToken)">
+            <summary>
+            Updates an existing medical history record.
+            </summary>
+            <param name="id">The unique identifier of the medical history record to update.</param>
+            <param name="command">The data to update the medical history record.</param>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>The updated medical history record.</returns>
+            <remarks>
+            Sample request:
+            
+                PUT /api/MedicalHistory/1
+                {
+                    "medicalHistoryID": 1,
+                    "diseaseName": "Diabetes",
+                    "diagnosisDate": "2023-09-01",
+                    "description": "Updated description for the chronic disease."
+                }
+            
+            </remarks>
+            <response code="200">Successfully updated the medical history record.</response>
+            <response code="400">The request data is invalid or the IDs don't match.</response>
+            <response code="401">Authentication failed. User is not authenticated.</response>
+            <response code="403">Authorization failed. User does not have permission to update medical history records.</response>
+            <response code="404">The medical history record with the specified ID was not found.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.MedicalHistoryController.DeleteMedicalHistory(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Deletes a specific medical history record.
+            </summary>
+            <param name="id">The unique identifier of the medical history record to delete.</param>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>A confirmation of the deletion.</returns>
+            <response code="200">Successfully deleted the medical history record.</response>
+            <response code="401">Authentication failed. User is not authenticated.</response>
+            <response code="403">Authorization failed. User does not have permission to delete medical history records.</response>
+            <response code="404">The medical history record with the specified ID was not found.</response>
+        </member>
+        <member name="T:RoshettaProAPI.Api.Controllers.MedicationController">
+            <summary>
+            Provides API endpoints for managing medications.
+            </summary>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.MedicationController.GetAllMedication(System.Threading.CancellationToken)">
+            <summary>
+            Retrieves all medication records.
+            </summary>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>A collection of all medication records.</returns>
+            <response code="200">Successfully retrieved the collection of medication records.</response>
+            <response code="401">Authentication failed. User is not authenticated.</response>
+            <response code="403">Authorization failed. User does not have permission to access this resource.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.MedicationController.GetMedicationById(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Retrieves a specific medication record by its unique identifier.
+            </summary>
+            <param name="id">The unique identifier of the medication record.</param>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>The requested medication record.</returns>
+            <response code="200">Successfully retrieved the medication record.</response>
+            <response code="401">Authentication failed. User is not authenticated.</response>
+            <response code="403">Authorization failed. User does not have permission to access this resource.</response>
+            <response code="404">The medication record with the specified ID was not found.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.MedicationController.CreateMedication(RoshettaProAPI.Core.MediatrHandlers.Medication.Commands.Create.CreateMedicationCommand,System.Threading.CancellationToken)">
+            <summary>
+            Creates a new medication record.
+            </summary>
+            <param name="command">The data required to create a new medication record.</param>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>The newly created medication record.</returns>
+            <remarks>
+            Sample request:
+            
+                POST /api/Medication
+                {
+                    "name": "Paracetamol",
+                    "description": "Pain reliever and fever reducer",
+                    "sideEffects": "Nausea, Vomiting",
+                    "medicationForm": "Tablet"
+                }
+            
+            </remarks>
+            <response code="201">Successfully created the medication record.</response>
+            <response code="400">The request data is invalid or incomplete.</response>
+            <response code="401">Authentication failed. User is not authenticated.</response>
+            <response code="403">Authorization failed. User does not have permission to create medication records.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.MedicationController.UpdateMedication(System.Int32,RoshettaProAPI.Core.MediatrHandlers.Medication.Commands.Update.UpdateMedicationCommand,System.Threading.CancellationToken)">
+            <summary>
+            Updates an existing medication record.
+            </summary>
+            <param name="id">The unique identifier of the medication record to update.</param>
+            <param name="command">The data to update the medication record.</param>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>The updated medication record.</returns>
+            <remarks>
+            Sample request:
+            
+                PUT /api/Medication/1
+                {
+                    "medicationID": 1,
+                    "name": "Paracetamol",
+                    "description": "Pain reliever and fever reducer",
+                    "sideEffects": "Mild Nausea",
+                    "medicationForm": "Tablet"
+                }
+            
+            </remarks>
+            <response code="200">Successfully updated the medication record.</response>
+            <response code="400">The request data is invalid or the IDs don't match.</response>
+            <response code="401">Authentication failed. User is not authenticated.</response>
+            <response code="403">Authorization failed. User does not have permission to update medication records.</response>
+            <response code="404">The medication record with the specified ID was not found.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.MedicationController.DeleteMedication(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Deletes a specific medication record.
+            </summary>
+            <param name="id">The unique identifier of the medication record to delete.</param>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>A confirmation of the deletion.</returns>
+            <response code="200">Successfully deleted the medication record.</response>
+            <response code="401">Authentication failed. User is not authenticated.</response>
+            <response code="403">Authorization failed. User does not have permission to delete medication records.</response>
+            <response code="404">The medication record with the specified ID was not found.</response>
+        </member>
+        <member name="T:RoshettaProAPI.Api.Controllers.PatientController">
+            <summary>
+            Handles API endpoints related to Patient operations.
+            </summary>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.PatientController.GetAllPatients(System.Threading.CancellationToken)">
+            <summary>
+            Retrieves all patients.
+            </summary>
+            <remarks>
+            Requires the role "Admin".
+            </remarks>
+            <param name="cancellationToken">Cancellation token for the request.</param>
+            <returns>List of patients.</returns>
+            <response code="200">Returns the list of patients.</response>
+            <response code="403">Unauthorized access if the user does not have the required role.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.PatientController.GetPatientById(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Retrieves a specific patient by their ID.
+            </summary>
+            <remarks>
+            Requires the role "Admin", "Doctor", or "Patient".
+            </remarks>
+            <param name="id">The ID of the patient to retrieve.</param>
+            <param name="cancellationToken">Cancellation token for the request.</param>
+            <returns>Details of the specified patient.</returns>
+            <response code="200">Returns the patient details.</response>
+            <response code="404">If the patient is not found.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.PatientController.CreatePatient(RoshettaProAPI.Core.MediatrHandlers.Patient.Commands.Create.CreatePatientCommand,System.Threading.CancellationToken)">
+            <summary>
+            Creates a new patient.
+            </summary>
+            <remarks>
+            This endpoint does not require any specific roles.
+            </remarks>
+            <param name="command">The details of the patient to create.</param>
+            <param name="cancellationToken">Cancellation token for the request.</param>
+            <returns>Confirmation of the patient creation.</returns>
+            <response code="201">Patient created successfully.</response>
+            <response code="400">If the patient data is invalid or email is already registered.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.PatientController.UpdatePatient(System.Int32,RoshettaProAPI.Core.MediatrHandlers.Patient.Commands.Update.UpdatePatientCommand,System.Threading.CancellationToken)">
+            <summary>
+            Updates an existing patient.
+            </summary>
+            <remarks>
+            Requires the role "Admin" or "Patient".
+            </remarks>
+            <param name="id">The ID of the patient to update.</param>
+            <param name="command">The updated patient details.</param>
+            <param name="cancellationToken">Cancellation token for the request.</param>
+            <returns>Confirmation of the patient update.</returns>
+            <response code="200">Patient updated successfully.</response>
+            <response code="400">If the patient ID in the URL does not match the request body or if the update data is invalid.</response>
+            <response code="404">If the patient is not found.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.PatientController.DeletePatient(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Deletes an existing patient.
+            </summary>
+            <remarks>
+            Requires the role "Admin" or "Patient".
+            </remarks>
+            <param name="id">The ID of the patient to delete.</param>
+            <param name="cancellationToken">Cancellation token for the request.</param>
+            <returns>Confirmation of the patient deletion.</returns>
+            <response code="200">Patient deleted successfully.</response>
+            <response code="404">If the patient is not found.</response>
+        </member>
+        <member name="T:RoshettaProAPI.Api.Controllers.PrescriptionController">
+            <summary>
+            Provides API endpoints for managing prescription records.
+            </summary>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.PrescriptionController.GetAllPrescriptions(System.Threading.CancellationToken)">
+            <summary>
+            Retrieves all prescription records.
+            </summary>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>A collection of all prescription records.</returns>
+            <response code="200">Successfully retrieved the collection of prescription records.</response>
+            <response code="401">Authentication failed. User is not authenticated.</response>
+            <response code="403">Authorization failed. User does not have permission to access this resource.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.PrescriptionController.GetPrescriptionById(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Retrieves a specific prescription record by its unique identifier.
+            </summary>
+            <param name="id">The unique identifier of the prescription record.</param>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>The requested prescription record.</returns>
+            <response code="200">Successfully retrieved the prescription record.</response>
+            <response code="401">Authentication failed. User is not authenticated.</response>
+            <response code="403">Authorization failed. User does not have permission to access this resource.</response>
+            <response code="404">The prescription record with the specified ID was not found.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.PrescriptionController.CreatePrescription(RoshettaProAPI.Core.MediatrHandlers.Prescription.Commands.Create.CreatePrescriptionCommand,System.Threading.CancellationToken)">
+            <summary>
+            Creates a new prescription record.
+            </summary>
+            <param name="command">The data required to create a new prescription record.</param>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>The newly created prescription record.</returns>
+            <remarks>
+            Sample request:
+            
+                POST /api/Prescription
+                {
+                    "patientID": 1,
+                    "doctorID": 2,
+                    "medicationID": 10,
+                    "dose": "500mg",
+                    "duration": "7 days",
+                    "instructions": "Take after meals"
+                }
+            
+            </remarks>
+            <response code="201">Successfully created the prescription record.</response>
+            <response code="400">The request data is invalid or incomplete.</response>
+            <response code="401">Authentication failed. User is not authenticated.</response>
+            <response code="403">Authorization failed. User does not have permission to create prescription records.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.PrescriptionController.UpdatePrescription(System.Int32,RoshettaProAPI.Core.MediatrHandlers.Prescription.Commands.Update.UpdatePrescriptionCommand,System.Threading.CancellationToken)">
+            <summary>
+            Updates an existing prescription record.
+            </summary>
+            <param name="id">The unique identifier of the prescription record to update.</param>
+            <param name="command">The data to update the prescription record.</param>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>The updated prescription record.</returns>
+            <remarks>
+            Sample request:
+            
+                PUT /api/Prescription/1
+                {
+                    "prescriptionID": 1,
+                    "patientID": 1,
+                    "doctorID": 2,
+                    "medicationID": 12,
+                    "dose": "250mg",
+                    "duration": "5 days",
+                    "instructions": "Take before meals"
+                }
+            
+            </remarks>
+            <response code="200">Successfully updated the prescription record.</response>
+            <response code="400">The request data is invalid or the IDs don't match.</response>
+            <response code="401">Authentication failed. User is not authenticated.</response>
+            <response code="403">Authorization failed. User does not have permission to update prescription records.</response>
+            <response code="404">The prescription record with the specified ID was not found.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.PrescriptionController.DeletePrescription(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Deletes a specific prescription record.
+            </summary>
+            <param name="id">The unique identifier of the prescription record to delete.</param>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>A confirmation of the deletion.</returns>
+            <response code="200">Successfully deleted the prescription record.</response>
+            <response code="401">Authentication failed. User is not authenticated.</response>
+            <response code="403">Authorization failed. User does not have permission to delete prescription records.</response>
+            <response code="404">The prescription record with the specified ID was not found.</response>
+        </member>
+        <member name="T:RoshettaProAPI.Api.Controllers.XrayController">
+            <summary>
+            Provides API endpoints for managing X-ray records.
+            </summary>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.XrayController.GetAllXray(System.Threading.CancellationToken)">
+            <summary>
+            Retrieves all X-ray records.
+            </summary>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>A collection of all X-ray records.</returns>
+            <response code="200">Successfully retrieved the collection of X-ray records.</response>
+            <response code="401">Authentication failed. User is not authenticated.</response>
+            <response code="403">Authorization failed. User does not have permission to access this resource.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.XrayController.GetXrayById(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Retrieves a specific X-ray record by its unique identifier.
+            </summary>
+            <param name="id">The unique identifier of the X-ray record.</param>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>The requested X-ray record.</returns>
+            <response code="200">Successfully retrieved the X-ray record.</response>
+            <response code="401">Authentication failed. User is not authenticated.</response>
+            <response code="403">Authorization failed. User does not have permission to access this resource.</response>
+            <response code="404">The X-ray record with the specified ID was not found.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.XrayController.CreateXray(RoshettaProAPI.Core.MediatrHandlers.Xray.Commands.Create.CreateXrayCommand,System.Threading.CancellationToken)">
+            <summary>
+            Creates a new X-ray record.
+            </summary>
+            <param name="command">The data required to create a new X-ray record.</param>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>The newly created X-ray record.</returns>
+            <remarks>
+            Sample request:
+            
+                POST /api/Xray
+                {
+                    "patientID": 1,
+                    "doctorID": 2,
+                    "dateTaken": "2023-09-17T10:30:00Z",
+                    "xrayImageURL": "https://example.com/xrays/chest_001.jpg",
+                    "labName": "Central Hospital Radiology",
+                    "xrayType": "Chest X-ray",
+                    "notes": "No significant abnormalities detected."
+                }
+            
+            </remarks>
+            <response code="201">Successfully created the X-ray record.</response>
+            <response code="400">The request data is invalid or incomplete.</response>
+            <response code="401">Authentication failed. User is not authenticated.</response>
+            <response code="403">Authorization failed. User does not have permission to create X-ray records.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.XrayController.UpdateXray(System.Int32,RoshettaProAPI.Core.MediatrHandlers.Xray.Commands.Update.UpdateXrayCommand,System.Threading.CancellationToken)">
+            <summary>
+            Updates an existing X-ray record.
+            </summary>
+            <param name="id">The unique identifier of the X-ray record to update.</param>
+            <param name="command">The data to update the X-ray record.</param>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>The updated X-ray record.</returns>
+            <remarks>
+            Sample request:
+            
+                PUT /api/Xray/1
+                {
+                    "xrayID": 1,
+                    "patientID": 1,
+                    "doctorID": 2,
+                    "dateTaken": "2023-09-17T10:30:00Z",
+                    "xrayImageURL": "https://example.com/xrays/chest_001_updated.jpg",
+                    "labName": "Central Hospital Radiology",
+                    "xrayType": "Chest X-ray",
+                    "notes": "Upon review, minor abnormality detected in lower right lobe."
+                }
+            
+            </remarks>
+            <response code="200">Successfully updated the X-ray record.</response>
+            <response code="400">The request data is invalid or the IDs don't match.</response>
+            <response code="401">Authentication failed. User is not authenticated.</response>
+            <response code="403">Authorization failed. User does not have permission to update X-ray records.</response>
+            <response code="404">The X-ray record with the specified ID was not found.</response>
+        </member>
+        <member name="M:RoshettaProAPI.Api.Controllers.XrayController.DeleteXray(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Deletes a specific X-ray record.
+            </summary>
+            <param name="id">The unique identifier of the X-ray record to delete.</param>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>A confirmation of the deletion.</returns>
+            <response code="200">Successfully deleted the X-ray record.</response>
+            <response code="401">Authentication failed. User is not authenticated.</response>
+            <response code="403">Authorization failed. User does not have permission to delete X-ray records.</response>
+            <response code="404">The X-ray record with the specified ID was not found.</response>
+        </member>
+    </members>
+</doc>

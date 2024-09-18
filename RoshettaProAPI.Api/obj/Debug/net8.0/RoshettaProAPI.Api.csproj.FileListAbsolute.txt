@@ -173,3 +173,4 @@ D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Ap
 D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Api\bin\Debug\net8.0\RoshettaProAPI.Infrastructure.pdb
 D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Api\obj\Debug\net8.0\RoshettaProAPI.Api.sourcelink.json
 D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Api\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+D:\Prescriptions-Management-System-Roshetta-Pro\RoshettaProAPI\RoshettaProAPI.Api\bin\Debug\net8.0\RoshettaProAPI.Api.xml

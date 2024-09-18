@@ -77,7 +77,7 @@ public class LoginHandler : IRequestHandler<LoginCommand, ApiResponse<string>>
             issuer: _configuration["Jwt:Issuer"],
             audience: _configuration["Jwt:Audience"],
             claims: claims,
-            expires: DateTime.UtcNow.AddMinutes(30), // Token validity period
+            expires: DateTime.UtcNow.AddMinutes(5), // Token validity period
             signingCredentials: creds);
 
         return new JwtSecurityTokenHandler().WriteToken(token);
